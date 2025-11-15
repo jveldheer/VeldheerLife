@@ -109,18 +109,6 @@ const Media = () => {
                 }`}>
                   {feature.description}
                 </p>
-
-                {/* Image Placeholder */}
-                <div className={`mt-6 bg-veldheer-dark/50 ${
-                  feature.featured ? 'h-64 md:h-96' : 'h-48 md:h-64'
-                } flex items-center justify-center border-2 border-veldheer-gold/30`}>
-                  <div className="text-center text-veldheer-gold/30">
-                    <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                    </svg>
-                    <p className="text-xs uppercase tracking-wider font-heading">Insert {feature.title} Still</p>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
