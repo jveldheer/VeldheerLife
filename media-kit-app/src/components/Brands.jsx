@@ -31,17 +31,14 @@ const Brands = () => {
 
   const partnershipLanes = [
     {
-      icon: '⌚',
       title: 'Performance Technology',
       description: 'Wearables, health technology, and recovery tools'
     },
     {
-      icon: '🥩',
       title: 'Food & Grocery',
       description: 'Meat, better-for-you CPG products, and real ingredients'
     },
     {
-      icon: '👨‍👩‍👧‍👦',
       title: 'Family & Kids',
       description: 'Food brands that care about real performance and health'
     },
@@ -148,7 +145,6 @@ const Brands = () => {
                   transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
                   className="text-center bg-veldheer-dark p-8 border-t-4 border-veldheer-gold"
                 >
-                  <div className="text-6xl mb-4">{lane.icon}</div>
                   <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3">
                     {lane.title}
                   </h4>

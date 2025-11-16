@@ -99,10 +99,9 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-8 border border-veldheer-gold/30 hover:border-veldheer-gold transition-all duration-300"
+                className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-8 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
-                <div className="absolute top-0 left-0 w-2 h-full bg-veldheer-gold transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
-                <div className="text-4xl mb-4 filter grayscale group-hover:grayscale-0 transition-all duration-300">🏈</div>
+                <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3 group-hover:text-white transition-colors duration-300">Athletes & Parents</h4>
                 <p className="text-gray-300 text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
                   Young athletes and their parents who want real training and real food
                 </p>
@@ -112,10 +111,9 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-8 border border-veldheer-gold/30 hover:border-veldheer-gold transition-all duration-300"
+                className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-8 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
-                <div className="absolute top-0 left-0 w-2 h-full bg-veldheer-gold transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
-                <div className="text-4xl mb-4 filter grayscale group-hover:grayscale-0 transition-all duration-300">💪</div>
+                <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3 group-hover:text-white transition-colors duration-300">Offensive Linemen</h4>
                 <p className="text-gray-300 text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
                   Offensive linemen who want to dominate physically and mentally
                 </p>
@@ -125,10 +123,9 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.9 }}
-                className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-8 border border-veldheer-gold/30 hover:border-veldheer-gold transition-all duration-300"
+                className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-8 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
-                <div className="absolute top-0 left-0 w-2 h-full bg-veldheer-gold transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
-                <div className="text-4xl mb-4 filter grayscale group-hover:grayscale-0 transition-all duration-300">🍳</div>
+                <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3 group-hover:text-white transition-colors duration-300">Families</h4>
                 <p className="text-gray-300 text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
                   Families who want budget-friendly, high-protein, high-flavor meals that respect long-term health
                 </p>

@@ -111,26 +111,17 @@ const Culinary = () => {
               <div className="bg-gradient-to-br from-veldheer-gold/10 to-veldheer-bronze/5 border-2 border-veldheer-gold/30 p-8">
                 <h4 className="text-2xl font-display font-bold text-veldheer-gold mb-6">Culinary Credentials</h4>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="text-3xl">🍳</div>
-                    <div>
-                      <div className="font-heading font-bold text-white text-lg">Season 5 Cast Member</div>
-                      <div className="text-gray-400 font-body">Next Level Chef on FOX</div>
-                    </div>
+                  <div className="border-l-4 border-veldheer-gold pl-4 py-2">
+                    <div className="font-heading font-bold text-white text-lg">Season 5 Cast Member</div>
+                    <div className="text-gray-400 font-body">Next Level Chef on FOX</div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <div className="text-3xl">🏫</div>
-                    <div>
-                      <div className="font-heading font-bold text-white text-lg">School Lunch Man</div>
-                      <div className="text-gray-400 font-body">Served real food to hundreds of kids</div>
-                    </div>
+                  <div className="border-l-4 border-veldheer-gold pl-4 py-2">
+                    <div className="font-heading font-bold text-white text-lg">School Lunch Man</div>
+                    <div className="text-gray-400 font-body">Served real food to hundreds of kids</div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <div className="text-3xl">🥩</div>
-                    <div>
-                      <div className="font-heading font-bold text-white text-lg">Performance Nutrition</div>
-                      <div className="text-gray-400 font-body">12 years fueling an NFL body</div>
-                    </div>
+                  <div className="border-l-4 border-veldheer-gold pl-4 py-2">
+                    <div className="font-heading font-bold text-white text-lg">Performance Nutrition</div>
+                    <div className="text-gray-400 font-body">12 years fueling an NFL body</div>
                   </div>
                 </div>
               </div>

@@ -31,18 +31,6 @@ const Hero = ({ opacity }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="inline-block mb-8"
-          >
-            <div className="px-6 py-2 bg-veldheer-gold/10 border border-veldheer-gold/30 backdrop-blur-sm">
-              <span className="text-veldheer-gold font-heading text-sm tracking-widest uppercase">Media Kit 2025</span>
-            </div>
-          </motion.div>
-
           {/* Main Logo/Title */}
           <motion.h1
             className="text-6xl md:text-8xl lg:text-9xl font-display font-black mb-6 tracking-tight"

@@ -172,8 +172,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="mt-16 text-center text-gray-500 font-body"
           >
-            <p className="mb-2">© {new Date().getFullYear()} Veldheer Life. All rights reserved.</p>
-            <p className="text-sm">Media Kit 2025</p>
+            <p>© {new Date().getFullYear()} Veldheer Life. All rights reserved.</p>
           </motion.div>
         </div>
       </div>
