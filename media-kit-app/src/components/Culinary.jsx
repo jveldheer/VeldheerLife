@@ -130,20 +130,16 @@ const Culinary = () => {
               <div className="bg-veldheer-accent border-l-4 border-veldheer-gold p-6">
                 <h4 className="text-xl font-heading font-bold text-white mb-4">Popular Content Themes</h4>
                 <ul className="space-y-3 text-gray-300 font-body">
-                  <li className="flex items-center gap-3">
-                    <span className="text-veldheer-gold">▸</span>
+                  <li className="pl-4 border-l-2 border-veldheer-gold/50 py-1">
                     High-protein meal prep
                   </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-veldheer-gold">▸</span>
+                  <li className="pl-4 border-l-2 border-veldheer-gold/50 py-1">
                     Budget-friendly family dinners
                   </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-veldheer-gold">▸</span>
+                  <li className="pl-4 border-l-2 border-veldheer-gold/50 py-1">
                     Live fire and grill cooking
                   </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-veldheer-gold">▸</span>
+                  <li className="pl-4 border-l-2 border-veldheer-gold/50 py-1">
                     Game day recipes
                   </li>
                 </ul>

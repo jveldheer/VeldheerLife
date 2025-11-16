@@ -65,10 +65,9 @@ const LinemanVault = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                    className="flex items-start bg-veldheer-accent p-4 border-l-4 border-veldheer-gold"
+                    className="bg-veldheer-accent p-5 border-l-4 border-veldheer-gold text-gray-300 text-lg font-body leading-relaxed"
                   >
-                    <span className="text-veldheer-gold mr-4 text-2xl font-bold">▸</span>
-                    <span className="text-gray-300 text-lg font-body leading-relaxed">{feature}</span>
+                    {feature}
                   </motion.li>
                 ))}
               </ul>

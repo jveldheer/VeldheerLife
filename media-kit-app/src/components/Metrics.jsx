@@ -168,11 +168,10 @@ const Metrics = () => {
                     </div>
                   </div>
 
-                  <ul className="space-y-3">
+                  <ul className="space-y-2">
                     {platform.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start text-gray-300">
-                        <span className="text-veldheer-gold mr-3 mt-1">▸</span>
-                        <span className="font-body">{highlight}</span>
+                      <li key={i} className="pl-4 border-l-2 border-veldheer-gold/50 py-1 text-gray-300 font-body">
+                        {highlight}
                       </li>
                     ))}
                   </ul>
