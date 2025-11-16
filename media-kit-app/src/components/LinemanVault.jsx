@@ -74,25 +74,43 @@ const LinemanVault = () => {
               </ul>
             </motion.div>
 
-            {/* Right Column - Image Placeholder */}
+            {/* Right Column - Value Highlights */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              className="space-y-6"
             >
-              <div className="aspect-square bg-veldheer-accent border-4 border-veldheer-gold overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-veldheer-gold/30">
-                  <div className="text-center p-8">
-                    <svg className="w-32 h-32 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
-                    </svg>
-                    <p className="font-heading text-sm tracking-wider uppercase">Insert Vault Training Photo</p>
-                  </div>
+              {/* Platform Highlights */}
+              <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-2 border-veldheer-gold/30 p-8">
+                <h4 className="text-2xl font-display font-bold text-veldheer-gold mb-6">What Makes It Different</h4>
+                <div className="space-y-4 text-gray-300 font-body text-lg leading-relaxed">
+                  <p>
+                    <span className="text-veldheer-gold font-semibold">NFL-Tested:</span> Training methods proven at the highest level of football
+                  </p>
+                  <p>
+                    <span className="text-veldheer-gold font-semibold">Film Review:</span> Members can submit their own game film for personalized feedback
+                  </p>
+                  <p>
+                    <span className="text-veldheer-gold font-semibold">Real Nutrition:</span> Meal plans and recipes built for big athletes who need real fuel
+                  </p>
+                  <p>
+                    <span className="text-veldheer-gold font-semibold">Community Support:</span> Direct access to Jared and a brotherhood of linemen at every level
+                  </p>
                 </div>
               </div>
-              {/* Decorative Element */}
-              <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-veldheer-gold -z-10"></div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-veldheer-accent border-l-4 border-veldheer-gold p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-veldheer-gold mb-2">100+</div>
+                  <div className="text-sm text-gray-400 uppercase tracking-wide">Active Members</div>
+                </div>
+                <div className="bg-veldheer-accent border-l-4 border-veldheer-gold p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-veldheer-gold mb-2">7</div>
+                  <div className="text-sm text-gray-400 uppercase tracking-wide">Years Running</div>
+                </div>
+              </div>
             </motion.div>
           </div>
 

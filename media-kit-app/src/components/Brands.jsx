@@ -107,16 +107,17 @@ const Brands = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                  className="bg-veldheer-gray p-8 border-b-4 border-veldheer-gold hover:bg-veldheer-accent transition-all duration-300 transform hover:scale-105"
+                  className="group bg-gradient-to-br from-veldheer-gray to-veldheer-accent p-8 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
                 >
-                  {/* Logo Placeholder */}
-                  <div className="h-24 flex items-center justify-center mb-6 bg-veldheer-dark/50 border-2 border-veldheer-gold/30">
-                    <span className="text-veldheer-gold font-display font-bold text-2xl">
+                  {/* Brand Name */}
+                  <div className="mb-6 text-center">
+                    <h4 className="text-3xl font-display font-bold text-veldheer-gold group-hover:text-white transition-colors duration-300">
                       {partner.name}
-                    </span>
+                    </h4>
+                    <div className="w-16 h-px bg-veldheer-gold mx-auto mt-3 group-hover:w-24 transition-all duration-300"></div>
                   </div>
 
-                  <p className="text-gray-300 leading-relaxed font-body text-center">
+                  <p className="text-gray-300 group-hover:text-white leading-relaxed font-body text-center transition-colors duration-300">
                     {partner.description}
                   </p>
                 </motion.div>
