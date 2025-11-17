@@ -102,7 +102,7 @@ const Metrics = () => {
     {
       name: 'X',
       handle: '@veldheer68',
-      followers: '16,000+',
+      followers: '15,700',
       highlights: [
         'Real-time updates',
         'Community engagement',
