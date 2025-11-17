@@ -10,12 +10,12 @@ const Brands = () => {
     {
       name: 'Nike',
       logo: '/images/nike-logo.png',
-      description: 'Shared real world feedback from twelve seasons in the league on what big athletes actually need from gear, fit, and footwear'
+      description: 'Contracted Nike athlete who worked closely with the brand for 12 years during his NFL career, providing insight on what big athletes need from gear, fit, and footwear'
     },
     {
       name: 'Traeger',
       logo: '/images/traeger-logo.png',
-      description: 'Created game day and family cooking centered on live fire flavor, performance minded recipes, and approachable backyard content'
+      description: 'Used Traeger as a staple in home cooking and during his time as lunch program director at St. Paul The Apostle Elementary School, creating performance minded recipes and live fire content'
     },
     {
       name: 'US Wellness Meats',

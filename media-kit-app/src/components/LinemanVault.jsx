@@ -16,7 +16,7 @@ const LinemanVault = () => {
 
   const proofPoints = [
     { number: '100+', label: 'Current Paying Members' },
-    { number: '7', label: 'Years of Youth Camps' },
+    { number: '1', label: 'Year Platform Active' },
     { number: '12', label: 'NFL Seasons of Experience' },
   ]
 
@@ -139,8 +139,8 @@ const LinemanVault = () => {
                   <div className="text-sm text-gray-400 uppercase tracking-wide">Active Members</div>
                 </div>
                 <div className="bg-veldheer-accent border-l-4 border-veldheer-gold p-6 text-center">
-                  <div className="text-3xl font-display font-bold text-veldheer-gold mb-2">7</div>
-                  <div className="text-sm text-gray-400 uppercase tracking-wide">Years Running</div>
+                  <div className="text-3xl font-display font-bold text-veldheer-gold mb-2">1</div>
+                  <div className="text-sm text-gray-400 uppercase tracking-wide">Year Active</div>
                 </div>
               </div>
             </motion.div>
