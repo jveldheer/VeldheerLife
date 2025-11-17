@@ -159,6 +159,31 @@ const About = () => {
                 </p>
               </motion.div>
             </div>
+
+            {/* Feature Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              className="mt-16 lg:mt-20"
+            >
+              <div className="relative overflow-hidden group">
+                <img
+                  src="/images/jared-traeger.jpg"
+                  alt="Jared Veldheer cooking with Traeger"
+                  className="w-full h-96 md:h-[32rem] lg:h-[40rem] object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/90 via-veldheer-dark/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 lg:p-16">
+                  <p className="text-white font-display font-bold text-2xl md:text-3xl lg:text-4xl leading-tight mb-4">
+                    Bringing Performance Nutrition to Life
+                  </p>
+                  <p className="text-gray-200 font-body text-base md:text-lg lg:text-xl max-w-3xl">
+                    From home cooking to serving as lunch program director, creating meals that fuel real performance for athletes and families
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
