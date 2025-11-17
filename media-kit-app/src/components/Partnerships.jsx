@@ -103,9 +103,24 @@ const Partnerships = () => {
                 <h3 className="text-xl lg:text-2xl font-display font-bold text-veldheer-gold group-hover:text-white mb-4 transition-colors duration-300">
                   {opportunity.title}
                 </h3>
-                <p className="text-gray-300 group-hover:text-white leading-relaxed font-body font-normal text-base md:text-lg transition-colors duration-300">
+                <p className="text-gray-300 group-hover:text-white leading-relaxed font-body font-normal text-base md:text-lg transition-colors duration-300 mb-6">
                   {opportunity.description}
                 </p>
+
+                {/* CTA Button */}
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="inline-flex items-center gap-2 mt-auto pt-4 text-veldheer-gold group-hover:text-white font-heading font-semibold text-sm tracking-wider uppercase transition-colors duration-300"
+                >
+                  <span>Learn More</span>
+                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </motion.div>
             ))}
           </div>

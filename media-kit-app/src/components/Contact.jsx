@@ -111,7 +111,7 @@ const Contact = () => {
                       name="name"
                       required
                       className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
-                      placeholder="John Smith"
+                      placeholder="Your Full Name"
                     />
                   </div>
 
@@ -125,7 +125,7 @@ const Contact = () => {
                       name="email"
                       required
                       className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
-                      placeholder="john@company.com"
+                      placeholder="you@company.com"
                     />
                   </div>
                 </div>

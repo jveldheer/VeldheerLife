@@ -65,9 +65,14 @@ const LinemanVault = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                    className="bg-veldheer-accent p-5 md:p-6 border-l-4 border-veldheer-gold text-gray-300 text-base md:text-lg font-body font-normal leading-relaxed"
+                    className="bg-veldheer-accent p-5 md:p-6 border-l-4 border-veldheer-gold flex items-start gap-4"
                   >
-                    {feature}
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-gray-300 text-base md:text-lg font-body font-normal leading-relaxed">
+                      {feature}
+                    </span>
                   </motion.li>
                 ))}
               </ul>

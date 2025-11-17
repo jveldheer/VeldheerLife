@@ -112,8 +112,11 @@ const Culinary = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    className="bg-veldheer-accent p-6 md:p-7 border-l-4 border-veldheer-gold"
+                    className="bg-veldheer-accent p-6 md:p-7 border-l-4 border-veldheer-gold flex items-start gap-4"
                   >
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                     <p className="text-gray-300 text-base md:text-lg leading-relaxed font-body font-normal">
                       {item}
                     </p>
@@ -125,11 +128,35 @@ const Culinary = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.9 }}
-                className="mt-8 p-6 bg-veldheer-gray border-2 border-veldheer-gold"
+                className="mt-8 p-6 md:p-8 bg-veldheer-gray border-2 border-veldheer-gold"
               >
-                <p className="text-lg text-gray-300 font-body leading-relaxed italic">
-                  <span className="text-veldheer-gold font-semibold">Signature style includes</span> high powered protein bowls, smart uses of meat and eggs, big flavor sauces, and simple cooking methods that do not require a restaurant kitchen or a culinary degree.
-                </p>
+                <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-4">Signature Style</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
+                    <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>High powered protein bowls</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
+                    <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Smart uses of meat and eggs</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
+                    <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Big flavor sauces</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
+                    <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Simple methods that work in any kitchen</span>
+                  </li>
+                </ul>
               </motion.div>
             </motion.div>
 
