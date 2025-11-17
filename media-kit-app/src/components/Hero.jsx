@@ -86,8 +86,8 @@ const Hero = ({ opacity }) => {
             transition={{ duration: 0.8, delay: 1 }}
             className="max-w-4xl mx-auto mb-16 lg:mb-20"
           >
-            <div className="bg-veldheer-dark/80 backdrop-blur-sm p-6 md:p-8 border border-veldheer-gold/30">
-              <p className="text-lg md:text-xl lg:text-2xl font-body text-gray-200 leading-relaxed font-normal">
+            <div className="bg-veldheer-dark/90 backdrop-blur-md p-8 md:p-10 lg:p-12 border-l-4 border-veldheer-gold">
+              <p className="text-lg md:text-xl lg:text-2xl font-body text-white leading-relaxed font-normal text-center">
                 Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field
               </p>
             </div>
