@@ -44,9 +44,9 @@ const Media = () => {
     <section
       id="media"
       ref={ref}
-      className="relative pt-40 pb-32 md:pt-52 md:pb-40 lg:pt-60 lg:pb-48 bg-veldheer-gray"
+      className="relative pt-40 pb-32 md:pt-56 md:pb-40 lg:pt-72 lg:pb-56 xl:pt-80 xl:pb-64 bg-veldheer-gray"
     >
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <motion.div
