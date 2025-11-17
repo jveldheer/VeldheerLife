@@ -81,7 +81,7 @@ const Hero = ({ opacity }) => {
           </motion.p>
 
           <motion.p
-            className="text-lg md:text-xl lg:text-2xl font-body text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed"
+            className="text-base md:text-lg lg:text-xl font-body text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed font-normal"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -94,21 +94,21 @@ const Hero = ({ opacity }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
-            className="flex flex-wrap justify-center gap-8 mt-12 mb-12"
+            className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12 mt-12 mb-12"
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold text-veldheer-gold">241K+</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide mt-1">Followers</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-veldheer-gold">241K+</div>
+              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide mt-1 font-heading">Followers</div>
             </div>
             <div className="w-px bg-veldheer-gold/30"></div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold text-veldheer-gold">8M</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide mt-1">Monthly Views</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-veldheer-gold">8M</div>
+              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide mt-1 font-heading">Monthly Views</div>
             </div>
             <div className="w-px bg-veldheer-gold/30"></div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-display font-bold text-veldheer-gold">12</div>
-              <div className="text-sm text-gray-400 uppercase tracking-wide mt-1">NFL Seasons</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-veldheer-gold">12</div>
+              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide mt-1 font-heading">NFL Seasons</div>
             </div>
           </motion.div>
 

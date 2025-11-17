@@ -64,7 +64,7 @@ const Media = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body"
+            className="text-base md:text-lg lg:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body font-normal"
           >
             Jared's story has reached both hardcore football fans and everyday families. As a twelve year NFL offensive lineman who later stepped into an elementary school cafeteria to serve better food to kids, his work has been showcased on major sports and national news platforms.
           </motion.p>
@@ -120,7 +120,7 @@ const Media = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="mt-16 text-center"
           >
-            <p className="text-lg text-gray-400 font-body italic max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-gray-400 font-body font-normal italic max-w-3xl mx-auto">
               These platforms have introduced Jared's unique combination of NFL experience, performance cooking, and community service to millions of viewers across sports, lifestyle, and mainstream media.
             </p>
           </motion.div>

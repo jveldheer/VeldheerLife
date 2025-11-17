@@ -56,7 +56,7 @@ const Culinary = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body"
+            className="text-base md:text-lg lg:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body font-normal"
           >
             Under the Veldheer Life umbrella, food is not a side project. It is one of the main tools Jared uses to change lives. The same discipline that carried him through twelve NFL seasons now shows up on the cutting board and the stove.
           </motion.p>
@@ -79,9 +79,9 @@ const Culinary = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    className="bg-veldheer-accent p-6 border-l-4 border-veldheer-gold"
+                    className="bg-veldheer-accent p-6 md:p-7 border-l-4 border-veldheer-gold"
                   >
-                    <p className="text-gray-300 text-lg leading-relaxed font-body">
+                    <p className="text-gray-300 text-base md:text-lg leading-relaxed font-body font-normal">
                       {item}
                     </p>
                   </motion.div>
@@ -162,7 +162,7 @@ const Culinary = () => {
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-veldheer-dark mb-6">
                 Next Level Chef <span className="block mt-2">Season 5 on FOX</span>
               </h3>
-              <p className="text-xl md:text-2xl text-veldheer-dark/90 leading-relaxed font-body mb-8">
+              <p className="text-base md:text-lg lg:text-xl text-veldheer-dark/90 leading-relaxed font-body font-normal mb-8">
                 On Season 5 of Next Level Chef Jared brings the Veldheer Life philosophy into one of the most intense cooking environments on television. Under the mentorship of world-class chefs he combines NFL-level composure with real food cooking to prove that performance food can be exciting, bold, and fun to watch.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-veldheer-dark/80 font-heading font-semibold">

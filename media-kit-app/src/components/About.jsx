@@ -45,21 +45,21 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8 max-w-4xl mx-auto"
             >
-              <div className="bg-veldheer-accent/50 backdrop-blur-sm p-8 border border-veldheer-gold/20">
-                <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-body">
+              <div className="bg-veldheer-accent/50 backdrop-blur-sm p-8 md:p-10 border border-veldheer-gold/20">
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed font-body font-medium">
                   Jared Veldheer is a <span className="text-veldheer-gold font-semibold">twelve-year NFL offensive lineman</span> who has turned everything he learned in the trenches into a life mission. Under the Veldheer Life brand, he coaches offensive linemen, builds real-world strength programs, cooks high-performance meals, and serves families who want better health and better food.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent p-6 border-l-2 border-veldheer-gold">
-                  <p className="text-lg text-gray-300 leading-relaxed font-body">
+              <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+                <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent p-6 md:p-8 border-l-4 border-veldheer-gold">
+                  <p className="text-base md:text-lg text-gray-300 leading-relaxed font-body font-normal">
                     After more than a decade in the league with a helmet on, Jared has worn an apron as an elementary school lunch man, stepped into the kitchen on <span className="text-veldheer-gold font-semibold">Season 5 of Next Level Chef on FOX</span>, and launched the Veldheer Lineman Vault to teach the next generation how to move, fuel, and live for real strength.
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-veldheer-bronze/10 to-transparent p-6 border-l-2 border-veldheer-bronze">
-                  <p className="text-lg text-gray-300 leading-relaxed font-body">
+                <div className="bg-gradient-to-br from-veldheer-bronze/10 to-transparent p-6 md:p-8 border-l-4 border-veldheer-bronze">
+                  <p className="text-base md:text-lg text-gray-300 leading-relaxed font-body font-normal">
                     Today Veldheer Life brings all of that together: performance coaching for young athletes, nutrition and cooking content, faith-centered family life, travel, and unscripted moments from a six-foot-eight former lineman who still loves the weight room as much as the kitchen.
                   </p>
                 </div>
@@ -102,7 +102,7 @@ const About = () => {
                 className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-8 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
                 <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3 group-hover:text-white transition-colors duration-300">Athletes & Parents</h4>
-                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed font-body group-hover:text-white transition-colors duration-300">
                   Young athletes and their parents who want real training and real food
                 </p>
               </motion.div>
@@ -114,7 +114,7 @@ const About = () => {
                 className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-8 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
                 <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3 group-hover:text-white transition-colors duration-300">Offensive Linemen</h4>
-                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed font-body group-hover:text-white transition-colors duration-300">
                   Offensive linemen who want to dominate physically and mentally
                 </p>
               </motion.div>
@@ -126,7 +126,7 @@ const About = () => {
                 className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-8 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
                 <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3 group-hover:text-white transition-colors duration-300">Families</h4>
-                <p className="text-gray-300 text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed font-body group-hover:text-white transition-colors duration-300">
                   Families who want budget-friendly, high-protein, high-flavor meals that respect long-term health
                 </p>
               </motion.div>

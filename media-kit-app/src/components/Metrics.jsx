@@ -108,7 +108,7 @@ const Metrics = () => {
               Audience & <span className="text-veldheer-gold">Performance</span>
             </h2>
             <div className="w-24 h-1 bg-veldheer-gold mx-auto mb-6"></div>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-body">
+            <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto font-body font-normal">
               Growth driven almost entirely by organic content that teaches, entertains, and tells the truth about what it takes to be strong, healthy, and durable for the long term
             </p>
           </motion.div>
@@ -190,7 +190,7 @@ const Metrics = () => {
             <h3 className="text-3xl font-display font-bold text-veldheer-dark mb-4">
               Why This Matters for Partners
             </h3>
-            <p className="text-lg text-veldheer-dark font-body max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-veldheer-dark font-body max-w-4xl mx-auto leading-relaxed font-medium">
               Brands who work with Veldheer Life gain access to a deeply engaged, performance focused male audience that spends money on training, recovery tools, meat and grocery, game day food, technology, and long term health. The numbers above are driven by content that earns trust, which makes Jared a powerful voice when he puts his name behind a product or campaign.
             </p>
           </motion.div>

@@ -54,7 +54,7 @@ const LinemanVault = () => {
               <h3 className="text-3xl font-display font-bold text-white mb-6">
                 What the <span className="text-veldheer-gold">Vault</span> Is
               </h3>
-              <p className="text-xl text-gray-300 leading-relaxed font-body mb-8">
+              <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed font-body font-normal mb-8">
                 The Veldheer Lineman Vault is Jared's performance home base. It is an online community and training platform for offensive linemen who want an honest, practical blueprint to get stronger, faster, and more skilled on the field.
               </p>
 
@@ -65,7 +65,7 @@ const LinemanVault = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                    className="bg-veldheer-accent p-5 border-l-4 border-veldheer-gold text-gray-300 text-lg font-body leading-relaxed"
+                    className="bg-veldheer-accent p-5 md:p-6 border-l-4 border-veldheer-gold text-gray-300 text-base md:text-lg font-body font-normal leading-relaxed"
                   >
                     {feature}
                   </motion.li>
@@ -81,9 +81,9 @@ const LinemanVault = () => {
               className="space-y-6"
             >
               {/* Platform Highlights */}
-              <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-2 border-veldheer-gold/30 p-8">
+              <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-2 border-veldheer-gold/30 p-8 md:p-10">
                 <h4 className="text-2xl font-display font-bold text-veldheer-gold mb-6">What Makes It Different</h4>
-                <div className="space-y-4 text-gray-300 font-body text-lg leading-relaxed">
+                <div className="space-y-4 text-gray-300 font-body text-base md:text-lg leading-relaxed font-normal">
                   <p>
                     <span className="text-veldheer-gold font-semibold">NFL-Tested:</span> Training methods proven at the highest level of football
                   </p>
@@ -157,7 +157,7 @@ const LinemanVault = () => {
             </div>
 
             <div className="relative z-10">
-              <p className="text-2xl md:text-3xl lg:text-4xl font-display font-semibold text-veldheer-dark mb-8 leading-relaxed italic text-center">
+              <p className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-veldheer-dark mb-8 leading-relaxed italic text-center">
                 "Jared was one of my all time favorite teammates, smart, honest, and a true technician. The way he approached the game was thoughtful, disciplined, and all about mastering the details. Anyone learning from him is in great hands."
               </p>
 

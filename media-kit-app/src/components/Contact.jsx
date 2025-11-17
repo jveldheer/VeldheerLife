@@ -160,7 +160,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <p className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-veldheer-dark max-w-3xl mx-auto leading-relaxed italic">
+            <p className="text-lg md:text-xl lg:text-2xl font-display font-semibold text-veldheer-dark max-w-3xl mx-auto leading-relaxed italic">
               "If your brand is serious about serving athletes, families, and long term performance, Veldheer Life is ready to build something real with you."
             </p>
           </motion.div>

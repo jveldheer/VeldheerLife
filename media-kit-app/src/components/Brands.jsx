@@ -81,7 +81,7 @@ const Brands = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body"
+            className="text-base md:text-lg lg:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body font-normal"
           >
             Jared has partnered with respected names in sport, cooking, and human performance. These collaborations have included product insight from an NFL veteran, athlete education, live events, and ongoing ambassador roles.
           </motion.p>
@@ -114,7 +114,7 @@ const Brands = () => {
                     <div className="w-16 h-px bg-veldheer-gold mx-auto mt-3 group-hover:w-24 transition-all duration-300"></div>
                   </div>
 
-                  <p className="text-gray-300 group-hover:text-white leading-relaxed font-body text-center transition-colors duration-300">
+                  <p className="text-gray-300 group-hover:text-white leading-relaxed font-body font-normal text-base md:text-lg text-center transition-colors duration-300">
                     {partner.description}
                   </p>
                 </motion.div>
@@ -132,7 +132,7 @@ const Brands = () => {
             <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4 text-center">
               Top Partnership Lanes for <span className="text-veldheer-gold">2025</span>
             </h3>
-            <p className="text-gray-400 text-center mb-10 font-body">
+            <p className="text-gray-400 text-center mb-10 font-body font-normal text-base md:text-lg">
               Strategic alignment opportunities for maximum impact
             </p>
 
@@ -148,7 +148,7 @@ const Brands = () => {
                   <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3">
                     {lane.title}
                   </h4>
-                  <p className="text-gray-300 font-body leading-relaxed">
+                  <p className="text-gray-300 font-body font-normal leading-relaxed text-base md:text-lg">
                     {lane.description}
                   </p>
                 </motion.div>
