@@ -57,7 +57,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={ref}
-      className="relative py-32 md:py-40 lg:py-48 bg-veldheer-dark"
+      className="relative pt-40 pb-32 md:pt-52 md:pb-40 lg:pt-60 lg:pb-48 bg-veldheer-dark"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">

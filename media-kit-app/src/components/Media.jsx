@@ -10,28 +10,33 @@ const Media = () => {
     {
       title: 'NFL Films',
       description: 'Coverage that brings viewers inside life in the trenches and the mindset it takes to play offensive line at the highest level',
-      type: 'Television'
+      type: 'Television',
+      logo: '/images/nfl-films-logo.png'
     },
     {
       title: 'All or Nothing: Arizona Cardinals',
       description: 'Featured in the Amazon docu series that follows a full NFL season inside the building, on the field, and in the locker room',
-      type: 'Streaming'
+      type: 'Streaming',
+      logo: '/images/all-or-nothing-logo.png'
     },
     {
       title: 'The Today Show',
       description: 'National feature on Jared\'s work as an elementary school lunch man, focused on how he brought real food and performance nutrition thinking into school meals for kids',
-      type: 'Television'
+      type: 'Television',
+      logo: '/images/today-logo.png'
     },
     {
       title: 'Next Level Chef Season 5',
       description: 'Cast member on Gordon Ramsay\'s hit cooking competition series on FOX, where Jared brings his lineman mentality into the kitchen and shows what performance based cooking looks like under real pressure',
       type: 'Television',
-      featured: true
+      featured: true,
+      logo: '/images/NLC-logo.png'
     },
     {
       title: 'The Washington Post',
       description: 'Profile on Jared\'s mission as a lunch man to upgrade what kids eat at school and connect great food with long term health and performance',
-      type: 'Print'
+      type: 'Print',
+      logo: '/images/wp-logo.png'
     },
   ]
 
@@ -39,7 +44,7 @@ const Media = () => {
     <section
       id="media"
       ref={ref}
-      className="relative py-32 md:py-40 lg:py-48 bg-veldheer-gray"
+      className="relative pt-40 pb-32 md:pt-52 md:pb-40 lg:pt-60 lg:pb-48 bg-veldheer-gray"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -113,7 +118,16 @@ const Media = () => {
 
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
+                    <div className="flex items-center gap-4 mb-3">
+                      {feature.logo && (
+                        <div className="flex-shrink-0 bg-white p-2 rounded">
+                          <img
+                            src={feature.logo}
+                            alt={`${feature.title} logo`}
+                            className="h-8 md:h-10 w-auto object-contain"
+                          />
+                        </div>
+                      )}
                       <h3 className={`font-display font-bold text-white ${
                         feature.featured ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl'
                       }`}>

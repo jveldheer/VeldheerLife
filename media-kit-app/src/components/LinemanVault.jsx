@@ -24,7 +24,7 @@ const LinemanVault = () => {
     <section
       id="vault"
       ref={ref}
-      className="relative py-32 md:py-40 lg:py-48 bg-veldheer-gray"
+      className="relative pt-40 pb-32 md:pt-52 md:pb-40 lg:pt-60 lg:pb-48 bg-veldheer-gray"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

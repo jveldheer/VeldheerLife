@@ -10,7 +10,7 @@ const About = () => {
     <section
       id="about"
       ref={ref}
-      className="relative py-32 md:py-40 lg:py-48 bg-gradient-to-b from-veldheer-dark via-veldheer-gray to-veldheer-dark overflow-hidden"
+      className="relative pt-40 pb-32 md:pt-52 md:pb-40 lg:pt-60 lg:pb-48 bg-gradient-to-b from-veldheer-dark via-veldheer-gray to-veldheer-dark overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-veldheer-gold/5 rounded-full blur-3xl"></div>
