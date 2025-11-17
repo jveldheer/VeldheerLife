@@ -120,11 +120,11 @@ const Media = () => {
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-3">
                       {feature.logo && (
-                        <div className="flex-shrink-0 bg-white p-2 rounded">
+                        <div className="flex-shrink-0 bg-white p-2 rounded w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
                           <img
                             src={feature.logo}
                             alt={`${feature.title} logo`}
-                            className="h-8 md:h-10 w-auto object-contain"
+                            className="max-w-full max-h-full object-contain"
                           />
                         </div>
                       )}
