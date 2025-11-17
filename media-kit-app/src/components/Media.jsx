@@ -64,13 +64,35 @@ const Media = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base md:text-lg lg:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body font-normal"
+            className="text-base md:text-lg lg:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-20 lg:mb-28 leading-relaxed font-body font-normal"
           >
             Jared's story has reached both hardcore football fans and everyday families. As a twelve year NFL offensive lineman who later stepped into an elementary school cafeteria to serve better food to kids, his work has been showcased on major sports and national news platforms.
           </motion.p>
 
+          {/* Media Feature Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-20 lg:mb-28"
+          >
+            <div className="relative overflow-hidden group">
+              <img
+                src="/images/jared-media.jpg"
+                alt="Jared Veldheer media appearances"
+                className="w-full h-96 md:h-[32rem] lg:h-[40rem] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/90 via-veldheer-dark/40 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 lg:p-16">
+                <p className="text-white font-display font-bold text-2xl md:text-3xl lg:text-4xl leading-tight">
+                  Trusted by national networks and media outlets
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
           {/* Media Features Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
             {mediaFeatures.map((feature, index) => (
               <motion.div
                 key={index}
