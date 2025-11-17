@@ -106,8 +106,8 @@ const Media = () => {
                 }`}
               >
                 {feature.featured && (
-                  <div className="absolute top-0 right-0 bg-veldheer-gold text-veldheer-dark px-4 py-2 font-heading font-bold text-sm tracking-wider uppercase">
-                    Featured
+                  <div className="absolute top-0 right-0 bg-veldheer-gold text-veldheer-dark px-6 py-3 font-heading font-bold text-xs md:text-sm tracking-wider uppercase max-w-xs text-center">
+                    Premiers January 29th, 2026
                   </div>
                 )}
 
