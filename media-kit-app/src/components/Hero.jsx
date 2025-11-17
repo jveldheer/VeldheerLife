@@ -80,24 +80,11 @@ const Hero = ({ opacity }) => {
             Faith · Family · Food · Football · Performance
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="max-w-4xl mx-auto mb-16 lg:mb-20"
-          >
-            <div className="bg-veldheer-dark/85 backdrop-blur-sm p-6 md:p-8 lg:p-10 border-2 border-veldheer-gold/40">
-              <p className="text-lg md:text-xl lg:text-2xl font-body text-gray-100 leading-relaxed font-normal text-center md:text-left">
-                Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field
-              </p>
-            </div>
-          </motion.div>
-
           {/* Stats Row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
+            transition={{ duration: 0.8, delay: 1 }}
             className="flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-20 mb-16 lg:mb-20"
           >
             <div className="text-center px-4">
@@ -121,7 +108,7 @@ const Hero = ({ opacity }) => {
             className="mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
           >
             <a
               href="#contact"

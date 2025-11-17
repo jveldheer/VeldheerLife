@@ -18,11 +18,25 @@ const About = () => {
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Section Title */}
+          {/* Tagline Box */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto mb-20 lg:mb-28"
+          >
+            <div className="bg-veldheer-dark/85 backdrop-blur-sm p-6 md:p-8 lg:p-10 border-2 border-veldheer-gold/40">
+              <p className="text-lg md:text-xl lg:text-2xl font-body text-gray-100 leading-relaxed font-normal text-center md:text-left">
+                Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Section Title */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mb-24 lg:mb-32"
           >
             <div className="inline-block mb-4">
@@ -38,7 +52,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="flex justify-center mb-20 lg:mb-28"
           >
             <div className="relative">
@@ -57,7 +71,7 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
               className="text-center"
             >
               <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-body font-normal max-w-5xl mx-auto">
@@ -69,7 +83,7 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
               className="grid md:grid-cols-2 gap-8 lg:gap-12"
             >
               <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent p-8 lg:p-10 border-l-4 border-veldheer-gold">
@@ -90,7 +104,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
           >
             <div className="text-center mb-16 lg:mb-20">
               <span className="text-veldheer-gold/60 font-heading text-sm md:text-base tracking-widest uppercase">Target Audience</span>
@@ -103,7 +117,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
                 className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 lg:p-12 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
                 {/* Icon */}
@@ -121,7 +135,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
                 className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 lg:p-12 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
                 {/* Icon */}
@@ -144,7 +158,7 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
                 className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 lg:p-12 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
                 {/* Icon */}
@@ -164,7 +178,7 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.9 }}
+              transition={{ duration: 0.8, delay: 1.1 }}
               className="mt-16 lg:mt-20"
             >
               <div className="relative overflow-hidden group">
