@@ -23,7 +23,7 @@ const Culinary = () => {
     <section
       id="culinary"
       ref={ref}
-      className="relative py-24 md:py-32 bg-veldheer-dark"
+      className="relative py-32 md:py-40 lg:py-48 bg-veldheer-dark"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -33,14 +33,14 @@ const Culinary = () => {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-20 lg:mb-28"
           >
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6">
               Culinary Lane & <span className="text-veldheer-gold">Next Level Chef</span>
@@ -66,13 +66,13 @@ const Culinary = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20 lg:mb-28"
           >
             <div className="relative overflow-hidden group">
               <img
                 src="/images/cooking-main.jpg"
                 alt="Jared cooking in the kitchen"
-                className="w-full h-64 md:h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
@@ -80,7 +80,7 @@ const Culinary = () => {
               <img
                 src="/images/cooking-dish.jpg"
                 alt="High-performance meal"
-                className="w-full h-64 md:h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
@@ -88,13 +88,13 @@ const Culinary = () => {
               <img
                 src="/images/cooking-family.jpg"
                 alt="Family-friendly cooking"
-                className="w-full h-64 md:h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 mb-20 lg:mb-28">
             {/* Left Column - What Jared Cooks */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}

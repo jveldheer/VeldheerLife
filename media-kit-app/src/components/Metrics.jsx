@@ -85,7 +85,7 @@ const Metrics = () => {
     <section
       id="metrics"
       ref={ref}
-      className="relative py-24 md:py-32 bg-veldheer-dark"
+      className="relative py-32 md:py-40 lg:py-48 bg-veldheer-dark"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">

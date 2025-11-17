@@ -35,7 +35,7 @@ const Hero = ({ opacity }) => {
 
       <motion.div
         style={{ opacity }}
-        className="container mx-auto px-6 text-center z-10 relative"
+        className="container mx-auto px-6 lg:px-8 text-center z-10 relative py-20"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -44,7 +44,7 @@ const Hero = ({ opacity }) => {
         >
           {/* Main Logo/Title */}
           <motion.h1
-            className="text-6xl md:text-8xl lg:text-9xl font-display font-black mb-6 tracking-tight"
+            className="text-6xl md:text-8xl lg:text-[10rem] xl:text-[12rem] font-display font-black mb-8 lg:mb-12 tracking-tight leading-none"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -52,27 +52,27 @@ const Hero = ({ opacity }) => {
             <span className="block bg-gradient-to-r from-veldheer-gold via-white to-veldheer-gold bg-clip-text text-transparent">
               VELDHEER
             </span>
-            <span className="block text-white mt-2">LIFE</span>
+            <span className="block text-white mt-4 lg:mt-6">LIFE</span>
           </motion.h1>
 
           {/* Divider with accent */}
           <motion.div
-            className="flex items-center justify-center gap-4 my-8"
+            className="flex items-center justify-center gap-4 my-10 lg:my-14"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.div
-              className="h-px bg-gradient-to-r from-transparent via-veldheer-gold to-transparent"
+              className="h-px bg-gradient-to-r from-transparent via-veldheer-gold to-transparent w-32 md:w-48 lg:w-64"
               initial={{ width: 0 }}
-              animate={{ width: 200 }}
+              animate={{ width: 256 }}
               transition={{ duration: 1, delay: 0.7 }}
             />
           </motion.div>
 
           {/* Hero Tagline */}
           <motion.p
-            className="text-xl md:text-2xl lg:text-3xl font-heading font-semibold text-veldheer-gold max-w-4xl mx-auto leading-relaxed tracking-wide"
+            className="text-xl md:text-2xl lg:text-4xl font-heading font-semibold text-veldheer-gold max-w-5xl mx-auto leading-relaxed tracking-wide mb-8 lg:mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -81,7 +81,7 @@ const Hero = ({ opacity }) => {
           </motion.p>
 
           <motion.p
-            className="text-base md:text-lg lg:text-xl font-body text-gray-300 max-w-3xl mx-auto mt-6 leading-relaxed font-normal"
+            className="text-lg md:text-xl lg:text-2xl font-body text-gray-300 max-w-4xl mx-auto leading-relaxed font-normal mb-16 lg:mb-20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -94,21 +94,21 @@ const Hero = ({ opacity }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
-            className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12 mt-12 mb-12"
+            className="flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-20 mb-16 lg:mb-20"
           >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-veldheer-gold">241K+</div>
-              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide mt-1 font-heading">Followers</div>
+            <div className="text-center px-4">
+              <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-veldheer-gold mb-2">241K+</div>
+              <div className="text-sm md:text-base lg:text-lg text-gray-400 uppercase tracking-wider font-heading">Followers</div>
             </div>
-            <div className="w-px bg-veldheer-gold/30"></div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-veldheer-gold">8M</div>
-              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide mt-1 font-heading">Monthly Views</div>
+            <div className="hidden md:block w-px bg-veldheer-gold/30"></div>
+            <div className="text-center px-4">
+              <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-veldheer-gold mb-2">8M</div>
+              <div className="text-sm md:text-base lg:text-lg text-gray-400 uppercase tracking-wider font-heading">Monthly Views</div>
             </div>
-            <div className="w-px bg-veldheer-gold/30"></div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-veldheer-gold">12</div>
-              <div className="text-xs md:text-sm text-gray-400 uppercase tracking-wide mt-1 font-heading">NFL Seasons</div>
+            <div className="hidden md:block w-px bg-veldheer-gold/30"></div>
+            <div className="text-center px-4">
+              <div className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-veldheer-gold mb-2">12</div>
+              <div className="text-sm md:text-base lg:text-lg text-gray-400 uppercase tracking-wider font-heading">NFL Seasons</div>
             </div>
           </motion.div>
 
@@ -121,7 +121,7 @@ const Hero = ({ opacity }) => {
           >
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 bg-veldheer-gold text-veldheer-dark px-10 py-5 font-heading font-bold text-lg tracking-wider uppercase hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-2xl relative overflow-hidden"
+              className="group inline-flex items-center gap-3 bg-veldheer-gold text-veldheer-dark px-12 py-6 font-heading font-bold text-base md:text-lg lg:text-xl tracking-wider uppercase hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-2xl relative overflow-hidden"
               onClick={(e) => {
                 e.preventDefault()
                 document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })
@@ -134,31 +134,6 @@ const Hero = ({ opacity }) => {
               <div className="absolute inset-0 bg-gradient-to-r from-veldheer-bronze to-veldheer-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
           </motion.div>
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4, repeat: Infinity, repeatType: 'reverse', repeatDelay: 0.5 }}
-        >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-xs text-gray-500 uppercase tracking-widest">Scroll</span>
-            <svg
-              className="w-6 h-6 text-veldheer-gold"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
         </motion.div>
       </motion.div>
     </section>

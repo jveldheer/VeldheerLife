@@ -39,9 +39,9 @@ const Media = () => {
     <section
       id="media"
       ref={ref}
-      className="relative py-24 md:py-32 bg-veldheer-gray"
+      className="relative py-32 md:py-40 lg:py-48 bg-veldheer-gray"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <motion.div
