@@ -113,6 +113,18 @@ const Metrics = () => {
             </p>
           </motion.div>
 
+          {/* Context Note */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-12 text-center"
+          >
+            <p className="text-sm md:text-base text-gray-500 font-body italic max-w-3xl mx-auto">
+              Total follower count includes Instagram (143K), TikTok (48K), Facebook (28K), YouTube (4.9K), X/Twitter (16K+), and additional platforms
+            </p>
+          </motion.div>
+
           {/* Key Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
             {stats.map((stat, index) => (

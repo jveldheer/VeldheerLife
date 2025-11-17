@@ -84,26 +84,13 @@ const About = () => {
                 </p>
               </div>
             </motion.div>
-
-            {/* Core Brand Statement */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="relative p-12 lg:p-16 bg-gradient-to-r from-veldheer-gold via-veldheer-gold to-veldheer-bronze overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-veldheer-dark/10"></div>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-veldheer-dark leading-relaxed italic relative z-10 text-center">
-                "Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field, all while giving back to his community."
-              </p>
-            </motion.div>
           </div>
 
           {/* Who Jared Reaches */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
             <div className="text-center mb-16 lg:mb-20">
               <span className="text-veldheer-gold/60 font-heading text-sm md:text-base tracking-widest uppercase">Target Audience</span>
@@ -116,9 +103,15 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
                 className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 lg:p-12 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
+                {/* Icon */}
+                <div className="mb-6">
+                  <svg className="w-12 h-12 text-veldheer-gold group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
                 <h4 className="text-2xl lg:text-3xl font-heading font-bold text-veldheer-gold mb-4 group-hover:text-white transition-colors duration-300">Athletes & Parents</h4>
                 <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-body group-hover:text-white transition-colors duration-300">
                   Young athletes and their parents who want real training and real food
@@ -128,9 +121,20 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
                 className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 lg:p-12 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
+                {/* Icon */}
+                <div className="mb-6">
+                  <svg className="w-12 h-12 text-veldheer-gold group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <circle cx="12" cy="6" r="2" />
+                    <circle cx="6" cy="12" r="2" />
+                    <circle cx="18" cy="12" r="2" />
+                    <line x1="8" y1="12" x2="16" y2="12" />
+                    <line x1="10" y1="6" x2="6" y2="10" />
+                    <line x1="14" y1="6" x2="18" y2="10" />
+                  </svg>
+                </div>
                 <h4 className="text-2xl lg:text-3xl font-heading font-bold text-veldheer-gold mb-4 group-hover:text-white transition-colors duration-300">Offensive Linemen</h4>
                 <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-body group-hover:text-white transition-colors duration-300">
                   Offensive linemen who want to dominate physically and mentally
@@ -140,9 +144,15 @@ const About = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.9 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
                 className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 lg:p-12 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
               >
+                {/* Icon */}
+                <div className="mb-6">
+                  <svg className="w-12 h-12 text-veldheer-gold group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
                 <h4 className="text-2xl lg:text-3xl font-heading font-bold text-veldheer-gold mb-4 group-hover:text-white transition-colors duration-300">Families</h4>
                 <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-body group-hover:text-white transition-colors duration-300">
                   Families who want budget-friendly, high-protein, high-flavor meals that respect long-term health

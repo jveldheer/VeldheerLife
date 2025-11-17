@@ -83,19 +83,39 @@ const LinemanVault = () => {
               {/* Platform Highlights */}
               <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-2 border-veldheer-gold/30 p-8 md:p-10">
                 <h4 className="text-2xl font-display font-bold text-veldheer-gold mb-6">What Makes It Different</h4>
-                <div className="space-y-4 text-gray-300 font-body text-base md:text-lg leading-relaxed font-normal">
-                  <p>
-                    <span className="text-veldheer-gold font-semibold">NFL-Tested:</span> Training methods proven at the highest level of football
-                  </p>
-                  <p>
-                    <span className="text-veldheer-gold font-semibold">Film Review:</span> Members can submit their own game film for personalized feedback
-                  </p>
-                  <p>
-                    <span className="text-veldheer-gold font-semibold">Real Nutrition:</span> Meal plans and recipes built for big athletes who need real fuel
-                  </p>
-                  <p>
-                    <span className="text-veldheer-gold font-semibold">Community Support:</span> Direct access to Jared and a brotherhood of linemen at every level
-                  </p>
+                <div className="space-y-5 text-gray-300 font-body text-base md:text-lg leading-relaxed font-normal">
+                  <div className="flex items-start gap-4">
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p>
+                      <span className="text-veldheer-gold font-semibold">NFL-Tested:</span> Training methods proven at the highest level of football
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    <p>
+                      <span className="text-veldheer-gold font-semibold">Film Review:</span> Members can submit their own game film for personalized feedback
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                    </svg>
+                    <p>
+                      <span className="text-veldheer-gold font-semibold">Real Nutrition:</span> Meal plans and recipes built for big athletes who need real fuel
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <p>
+                      <span className="text-veldheer-gold font-semibold">Community Support:</span> Direct access to Jared and a brotherhood of linemen at every level
+                    </p>
+                  </div>
                 </div>
               </div>
 
