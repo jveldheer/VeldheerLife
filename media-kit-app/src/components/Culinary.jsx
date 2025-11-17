@@ -212,7 +212,7 @@ const Culinary = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 1 }}
-            className="relative bg-gradient-to-br from-veldheer-gold via-veldheer-gold to-veldheer-bronze overflow-hidden mb-16"
+            className="relative bg-gradient-to-br from-veldheer-dark via-veldheer-gray to-veldheer-dark overflow-hidden mb-16 border-4 border-veldheer-gold"
           >
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
@@ -221,27 +221,36 @@ const Culinary = () => {
                 alt="Next Level Chef Season 5"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-veldheer-gold/95 via-veldheer-gold/90 to-veldheer-bronze/95"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-veldheer-dark/90 via-veldheer-dark/85 to-veldheer-dark/90"></div>
             </div>
 
-            <div className="relative z-10 text-center max-w-4xl mx-auto p-10 md:p-16">
-              <div className="inline-block bg-veldheer-dark/80 backdrop-blur-sm px-6 py-3 mb-6 border-2 border-veldheer-dark">
-                <span className="text-veldheer-gold font-heading font-bold text-sm tracking-widest uppercase">Featured On National Television</span>
+            <div className="relative z-10 text-center max-w-4xl mx-auto p-8 md:p-12 lg:p-16">
+              <div className="inline-block bg-veldheer-gold px-6 py-3 mb-6">
+                <span className="text-veldheer-dark font-heading font-bold text-sm tracking-widest uppercase">Featured On National Television</span>
               </div>
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-veldheer-dark mb-6">
-                Next Level Chef <span className="block mt-2">Season 5 on FOX</span>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+                Next Level Chef <span className="block mt-2 text-veldheer-gold">Season 5 on FOX</span>
               </h3>
-              <p className="text-base md:text-lg lg:text-xl text-veldheer-dark/90 leading-relaxed font-body font-normal mb-8">
-                On Season 5 of Next Level Chef Jared brings the Veldheer Life philosophy into one of the most intense cooking environments on television. Under the mentorship of world-class chefs he combines NFL-level composure with real food cooking to prove that performance food can be exciting, bold, and fun to watch.
+              <p className="text-base md:text-lg text-gray-200 leading-relaxed font-body font-normal mb-8 max-w-3xl mx-auto">
+                Bringing the Veldheer Life philosophy to one of TV's most intense cooking competitions under the mentorship of world-class chefs.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-veldheer-dark/80 font-heading font-semibold">
-                <div className="flex items-center gap-2">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/></svg>
-                  <span>Millions of Viewers</span>
+
+              {/* Key Highlights */}
+              <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-2xl mx-auto">
+                <div className="bg-veldheer-dark/60 backdrop-blur-sm border-2 border-veldheer-gold/50 p-4 md:p-6">
+                  <svg className="w-8 h-8 md:w-10 md:h-10 text-veldheer-gold mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                    <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+                  </svg>
+                  <p className="text-white font-heading font-bold text-base md:text-lg">Millions of Viewers</p>
+                  <p className="text-gray-400 text-sm mt-1">National primetime audience</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/></svg>
-                  <span>Gordon Ramsay Mentor</span>
+                <div className="bg-veldheer-dark/60 backdrop-blur-sm border-2 border-veldheer-gold/50 p-4 md:p-6">
+                  <svg className="w-8 h-8 md:w-10 md:h-10 text-veldheer-gold mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <p className="text-white font-heading font-bold text-base md:text-lg">Gordon Ramsay</p>
+                  <p className="text-gray-400 text-sm mt-1">World-class mentorship</p>
                 </div>
               </div>
             </div>
