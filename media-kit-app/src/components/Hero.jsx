@@ -6,13 +6,24 @@ const Hero = ({ opacity }) => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-veldheer-dark"
     >
-      {/* Animated Background with Gradient Overlay */}
+      {/* Hero Background with Image */}
       <div className="absolute inset-0">
-        {/* Radial gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-veldheer-gold/20 via-transparent to-veldheer-bronze/10"></div>
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/images/hero-background.jpg)',
+          }}
+        ></div>
 
-        {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-veldheer-dark/70"></div>
+
+        {/* Gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-veldheer-gold/10 via-transparent to-veldheer-bronze/5"></div>
+
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
           backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, #c9a961 2px, #c9a961 4px),
                            repeating-linear-gradient(90deg, transparent, transparent 2px, #c9a961 2px, #c9a961 4px)`,
           backgroundSize: '100px 100px'
