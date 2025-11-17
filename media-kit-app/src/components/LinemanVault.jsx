@@ -99,6 +99,19 @@ const LinemanVault = () => {
                 </div>
               </div>
 
+              {/* Training Image */}
+              <div className="relative overflow-hidden group">
+                <img
+                  src="/images/vault-training.jpg"
+                  alt="Lineman training in the Vault"
+                  className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark via-transparent to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-white font-heading font-bold text-lg">Real Training. Real Results.</p>
+                </div>
+              </div>
+
               {/* Quick Stats */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-veldheer-accent border-l-4 border-veldheer-gold p-6 text-center">

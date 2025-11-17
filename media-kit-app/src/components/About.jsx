@@ -34,6 +34,23 @@ const About = () => {
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-veldheer-gold to-transparent mx-auto"></div>
           </motion.div>
 
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex justify-center mb-16"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-veldheer-gold to-veldheer-bronze rounded-full blur-2xl opacity-20"></div>
+              <img
+                src="/images/jared-profile.jpg"
+                alt="Jared Veldheer"
+                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-veldheer-gold shadow-2xl"
+              />
+            </div>
+          </motion.div>
+
           {/* Content Grid */}
           <div className="grid md:grid-cols-1 gap-12 items-center mb-16">
             {/* Single column content - no placeholder image */}

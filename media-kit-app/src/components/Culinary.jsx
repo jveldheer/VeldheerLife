@@ -61,6 +61,39 @@ const Culinary = () => {
             Under the Veldheer Life umbrella, food is not a side project. It is one of the main tools Jared uses to change lives. The same discipline that carried him through twelve NFL seasons now shows up on the cutting board and the stove.
           </motion.p>
 
+          {/* Cooking Images Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+          >
+            <div className="relative overflow-hidden group">
+              <img
+                src="/images/cooking-main.jpg"
+                alt="Jared cooking in the kitchen"
+                className="w-full h-64 md:h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <img
+                src="/images/cooking-dish.jpg"
+                alt="High-performance meal"
+                className="w-full h-64 md:h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <img
+                src="/images/cooking-family.jpg"
+                alt="Family-friendly cooking"
+                className="w-full h-64 md:h-72 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             {/* Left Column - What Jared Cooks */}
             <motion.div
@@ -152,10 +185,19 @@ const Culinary = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 1 }}
-            className="relative bg-gradient-to-br from-veldheer-gold via-veldheer-gold to-veldheer-bronze p-10 md:p-16 mb-16 overflow-hidden"
+            className="relative bg-gradient-to-br from-veldheer-gold via-veldheer-gold to-veldheer-bronze overflow-hidden mb-16"
           >
-            <div className="absolute inset-0 bg-veldheer-dark/10"></div>
-            <div className="relative z-10 text-center max-w-4xl mx-auto">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0">
+              <img
+                src="/images/next-Level-chef.Jpg"
+                alt="Next Level Chef Season 5"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-veldheer-gold/95 via-veldheer-gold/90 to-veldheer-bronze/95"></div>
+            </div>
+
+            <div className="relative z-10 text-center max-w-4xl mx-auto p-10 md:p-16">
               <div className="inline-block bg-veldheer-dark/80 backdrop-blur-sm px-6 py-3 mb-6 border-2 border-veldheer-dark">
                 <span className="text-veldheer-gold font-heading font-bold text-sm tracking-widest uppercase">Featured On National Television</span>
               </div>

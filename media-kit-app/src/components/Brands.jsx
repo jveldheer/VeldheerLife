@@ -9,22 +9,27 @@ const Brands = () => {
   const partners = [
     {
       name: 'Nike',
+      logo: '/images/nike-logo.png',
       description: 'Shared real world feedback from twelve seasons in the league on what big athletes actually need from gear, fit, and footwear'
     },
     {
       name: 'Traeger',
+      logo: '/images/traeger-logo.png',
       description: 'Created game day and family cooking centered on live fire flavor, performance minded recipes, and approachable backyard content'
     },
     {
       name: 'US Wellness Meats',
+      logo: '/images/us-wellness-logo.png',
       description: 'Highlighted the value of high quality animal protein, regenerative practices, and practical ways athletes and families can eat for strength'
     },
     {
       name: 'HexClad',
+      logo: '/images/hexclad-logo.png',
       description: 'Featured HexClad cookware in the kitchen and on camera, matching durable pans with high powered recipes for athletes and families'
     },
     {
       name: 'Thorne',
+      logo: '/images/thorne-logo.png',
       description: 'Used the same supplement line trusted in NFL locker rooms to teach athletes how to support recovery, sleep, and overall health with evidence based products'
     },
   ]
@@ -106,9 +111,18 @@ const Brands = () => {
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                   className="group bg-gradient-to-br from-veldheer-gray to-veldheer-accent p-8 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
                 >
-                  {/* Brand Name */}
+                  {/* Brand Logo & Name */}
                   <div className="mb-6 text-center">
-                    <h4 className="text-3xl font-display font-bold text-veldheer-gold group-hover:text-white transition-colors duration-300">
+                    <div className="flex justify-center mb-6">
+                      <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center">
+                        <img
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
+                    </div>
+                    <h4 className="text-2xl font-display font-bold text-veldheer-gold group-hover:text-white transition-colors duration-300">
                       {partner.name}
                     </h4>
                     <div className="w-16 h-px bg-veldheer-gold mx-auto mt-3 group-hover:w-24 transition-all duration-300"></div>
