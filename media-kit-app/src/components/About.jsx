@@ -25,8 +25,8 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto mb-20 lg:mb-28"
           >
-            <div className="bg-veldheer-dark/85 backdrop-blur-sm p-6 md:p-8 lg:p-10 border-2 border-veldheer-gold/40">
-              <p className="text-lg md:text-xl lg:text-2xl font-body text-gray-100 leading-relaxed font-normal text-center md:text-left">
+            <div className="bg-veldheer-dark/85 backdrop-blur-sm p-8 md:p-10 lg:p-12 border-2 border-veldheer-gold/40">
+              <p className="text-lg md:text-xl lg:text-2xl font-body text-gray-100 leading-relaxed font-normal text-center">
                 Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field
               </p>
             </div>
