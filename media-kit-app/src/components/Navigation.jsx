@@ -54,18 +54,26 @@ const Navigation = () => {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <motion.a
                 key={item.label}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="text-white hover:text-veldheer-gold transition-colors duration-300 font-heading font-medium text-sm tracking-wide uppercase"
+                className="text-white hover:text-veldheer-gold transition-colors duration-300 font-heading font-medium text-sm tracking-wide uppercase whitespace-nowrap"
                 whileHover={{ y: -2 }}
               >
                 {item.label}
               </motion.a>
             ))}
+            <motion.a
+              href="#contact"
+              onClick={(e) => scrollToSection(e, '#contact')}
+              className="bg-veldheer-gold text-veldheer-dark px-6 py-3 font-heading font-bold text-sm tracking-wider uppercase hover:bg-white transition-all duration-300 whitespace-nowrap ml-4"
+              whileHover={{ scale: 1.05 }}
+            >
+              Partner With Us
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -113,11 +121,18 @@ const Navigation = () => {
                     key={item.label}
                     href={item.href}
                     onClick={(e) => scrollToSection(e, item.href)}
-                    className="block text-white hover:text-veldheer-gold transition-colors duration-300 font-heading font-medium text-sm tracking-wide uppercase"
+                    className="block text-white hover:text-veldheer-gold transition-colors duration-300 font-heading font-medium text-sm tracking-wide uppercase py-2"
                   >
                     {item.label}
                   </a>
                 ))}
+                <a
+                  href="#contact"
+                  onClick={(e) => scrollToSection(e, '#contact')}
+                  className="block bg-veldheer-gold text-veldheer-dark px-6 py-3 font-heading font-bold text-sm tracking-wider uppercase hover:bg-white transition-all duration-300 text-center mt-4"
+                >
+                  Partner With Us
+                </a>
               </div>
             </motion.div>
           )}

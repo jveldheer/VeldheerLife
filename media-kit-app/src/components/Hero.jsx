@@ -80,14 +80,18 @@ const Hero = ({ opacity }) => {
             Faith · Family · Food · Football · Performance
           </motion.p>
 
-          <motion.p
-            className="text-lg md:text-xl lg:text-2xl font-body text-gray-300 max-w-4xl mx-auto leading-relaxed font-normal mb-16 lg:mb-20"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
+            className="max-w-4xl mx-auto mb-16 lg:mb-20"
           >
-            Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field
-          </motion.p>
+            <div className="bg-veldheer-dark/80 backdrop-blur-sm p-6 md:p-8 border border-veldheer-gold/30">
+              <p className="text-lg md:text-xl lg:text-2xl font-body text-gray-200 leading-relaxed font-normal">
+                Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field
+              </p>
+            </div>
+          </motion.div>
 
           {/* Stats Row */}
           <motion.div
@@ -121,14 +125,14 @@ const Hero = ({ opacity }) => {
           >
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 bg-veldheer-gold text-veldheer-dark px-12 py-6 font-heading font-bold text-base md:text-lg lg:text-xl tracking-wider uppercase hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-2xl relative overflow-hidden"
+              className="group inline-flex items-center gap-4 bg-veldheer-gold text-veldheer-dark px-14 py-7 font-heading font-bold text-lg md:text-xl lg:text-2xl tracking-wider uppercase hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-2xl relative overflow-hidden border-2 border-veldheer-gold"
               onClick={(e) => {
                 e.preventDefault()
                 document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })
               }}
             >
               <span className="relative z-10">Partner With Us</span>
-              <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 transform group-hover:translate-x-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
               <div className="absolute inset-0 bg-gradient-to-r from-veldheer-bronze to-veldheer-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

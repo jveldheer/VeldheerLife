@@ -52,13 +52,119 @@ const Contact = () => {
             </p>
           </motion.div>
 
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-20 lg:mb-28"
+          >
+            <div className="bg-veldheer-accent p-8 md:p-12 lg:p-16 border-4 border-veldheer-gold">
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4 text-center">
+                Start a <span className="text-veldheer-gold">Partnership Conversation</span>
+              </h3>
+              <p className="text-center text-gray-400 font-body mb-8 lg:mb-12 text-lg">
+                Fill out the form below and we'll get back to you within 24-48 hours
+              </p>
+
+              <form className="max-w-3xl mx-auto space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-white font-heading font-semibold mb-2">
+                      Your Name <span className="text-veldheer-gold">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
+                      placeholder="John Smith"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-white font-heading font-semibold mb-2">
+                      Email Address <span className="text-veldheer-gold">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
+                      placeholder="john@company.com"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="company" className="block text-white font-heading font-semibold mb-2">
+                    Company / Organization <span className="text-veldheer-gold">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    required
+                    className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
+                    placeholder="Your Company Name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="interest" className="block text-white font-heading font-semibold mb-2">
+                    Partnership Interest <span className="text-veldheer-gold">*</span>
+                  </label>
+                  <select
+                    id="interest"
+                    name="interest"
+                    required
+                    className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
+                  >
+                    <option value="">Select partnership type...</option>
+                    <option value="brand-partnership">Brand Partnership</option>
+                    <option value="content-creation">Content Creation</option>
+                    <option value="media-appearance">Media Appearance</option>
+                    <option value="vault-integration">Vault Integration</option>
+                    <option value="custom-program">Custom Program</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-white font-heading font-semibold mb-2">
+                    Message <span className="text-veldheer-gold">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows="5"
+                    className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
+                    placeholder="Tell us about your partnership idea..."
+                  ></textarea>
+                </div>
+
+                <div className="text-center pt-4">
+                  <button
+                    type="submit"
+                    className="bg-veldheer-gold text-veldheer-dark px-12 py-5 font-heading font-bold text-lg tracking-wider uppercase hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-xl"
+                  >
+                    Send Partnership Inquiry
+                  </button>
+                </div>
+              </form>
+            </div>
+          </motion.div>
+
           {/* Main Contact Info */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             {/* Left Column - Primary Contact */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-8"
             >
               {/* Email */}
