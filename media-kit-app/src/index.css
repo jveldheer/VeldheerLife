@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+/* Updated spacing system - v2.0 */
+
 @theme {
   /* Custom Colors */
   --color-veldheer-dark: #0a0a0a;
