@@ -6,15 +6,18 @@ const Hero = ({ opacity }) => {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-veldheer-dark"
     >
-      {/* Hero Background with Image */}
+      {/* Hero Background with Video */}
       <div className="absolute inset-0">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/images/hero-background.jpg)',
-          }}
-        ></div>
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/images/hero-video.mp4" type="video/mp4" />
+        </video>
 
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-veldheer-dark/70"></div>
