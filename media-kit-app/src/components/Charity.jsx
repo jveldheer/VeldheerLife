@@ -19,7 +19,7 @@ const Charity = () => {
           alt="Stay in the Game Fund"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-veldheer-dark/90 via-veldheer-dark/85 to-veldheer-dark/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-veldheer-dark/60 via-veldheer-dark/50 to-veldheer-dark/60"></div>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20 relative z-10">
