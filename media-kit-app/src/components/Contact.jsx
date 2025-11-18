@@ -1,10 +1,77 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 const Contact = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    company: '',
+    interest: '',
+    message: ''
+  })
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleChange = (e) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus({ type: '', message: '' })
+
+    try {
+      // Using Web3Forms - free form endpoint service
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with actual key
+          subject: `New Partnership Inquiry from ${formState.name}`,
+          from_name: formState.name,
+          email: formState.email,
+          company: formState.company,
+          partnership_type: formState.interest,
+          message: formState.message,
+        })
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24-48 hours.'
+        })
+        setFormState({
+          name: '',
+          email: '',
+          company: '',
+          interest: '',
+          message: ''
+        })
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Oops! Something went wrong. Please try again or email us directly at jared@veldheerlife.com'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   const contactInfo = {
     email: 'jared@veldheerlife.com',
@@ -99,7 +166,7 @@ const Contact = () => {
                 Fill out the form below and we'll get back to you within 24-48 hours
               </p>
 
-              <form className="max-w-3xl mx-auto space-y-6">
+              <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-white font-heading font-semibold mb-2">
@@ -109,6 +176,8 @@ const Contact = () => {
                       type="text"
                       id="name"
                       name="name"
+                      value={formState.name}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
                       placeholder="Your Full Name"
@@ -123,6 +192,8 @@ const Contact = () => {
                       type="email"
                       id="email"
                       name="email"
+                      value={formState.email}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
                       placeholder="you@company.com"
@@ -138,6 +209,8 @@ const Contact = () => {
                     type="text"
                     id="company"
                     name="company"
+                    value={formState.company}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
                     placeholder="Your Company Name"
@@ -151,6 +224,8 @@ const Contact = () => {
                   <select
                     id="interest"
                     name="interest"
+                    value={formState.interest}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
                   >
@@ -171,6 +246,8 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
+                    value={formState.message}
+                    onChange={handleChange}
                     required
                     rows="5"
                     className="w-full px-4 py-3 bg-veldheer-dark border-2 border-veldheer-gold/30 text-white font-body focus:border-veldheer-gold focus:outline-none transition-colors duration-300"
@@ -178,12 +255,23 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
+                {submitStatus.message && (
+                  <div className={`p-4 rounded ${
+                    submitStatus.type === 'success'
+                      ? 'bg-green-900/50 border-2 border-green-500 text-green-100'
+                      : 'bg-red-900/50 border-2 border-red-500 text-red-100'
+                  }`}>
+                    <p className="font-body text-center">{submitStatus.message}</p>
+                  </div>
+                )}
+
                 <div className="text-center pt-4">
                   <button
                     type="submit"
-                    className="bg-veldheer-gold text-veldheer-dark px-12 py-5 font-heading font-bold text-lg tracking-wider uppercase hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-xl"
+                    disabled={isSubmitting}
+                    className="bg-veldheer-gold text-veldheer-dark px-12 py-5 font-heading font-bold text-lg tracking-wider uppercase hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    Send Partnership Inquiry
+                    {isSubmitting ? 'Sending...' : 'Send Partnership Inquiry'}
                   </button>
                 </div>
               </form>

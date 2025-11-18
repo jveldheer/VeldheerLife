@@ -9,6 +9,7 @@ import Brands from './components/Brands'
 import LinemanVault from './components/LinemanVault'
 import Culinary from './components/Culinary'
 import Partnerships from './components/Partnerships'
+import Charity from './components/Charity'
 import Contact from './components/Contact'
 import './App.css'
 
@@ -27,6 +28,7 @@ function App() {
       <LinemanVault />
       <Culinary />
       <Partnerships />
+      <Charity />
       <Contact />
     </div>
   )
