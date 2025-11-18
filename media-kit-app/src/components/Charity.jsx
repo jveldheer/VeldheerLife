@@ -10,14 +10,16 @@ const Charity = () => {
     <section
       id="charity"
       ref={ref}
-      className="relative pt-40 pb-32 md:pt-56 md:pb-40 lg:pt-72 lg:pb-56 xl:pt-80 xl:pb-64 bg-gradient-to-br from-veldheer-dark via-veldheer-accent to-veldheer-dark"
+      className="relative pt-40 pb-32 md:pt-56 md:pb-40 lg:pt-72 lg:pb-56 xl:pt-80 xl:pb-64 bg-veldheer-dark overflow-hidden"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #c9a961 2px, transparent 2px)',
-          backgroundSize: '60px 60px'
-        }}></div>
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/stay-in-the-game.jpg"
+          alt="Stay in the Game Fund"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-veldheer-dark/90 via-veldheer-dark/85 to-veldheer-dark/90"></div>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20 relative z-10">
