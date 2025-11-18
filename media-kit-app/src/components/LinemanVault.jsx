@@ -127,9 +127,9 @@ const LinemanVault = () => {
               {/* Training Image */}
               <div className="relative overflow-hidden group">
                 <img
-                  src="/images/vault-training.jpg"
-                  alt="Lineman training in the Vault"
-                  className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  src="/images/vlvl16x9.png"
+                  alt="Veldheer Lineman Vault"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">

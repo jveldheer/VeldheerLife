@@ -58,7 +58,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-veldheer-gold to-veldheer-bronze rounded-full blur-3xl opacity-30"></div>
               <img
-                src="/images/jared-profile.jpg"
+                src="/images/profile-picture.jpg"
                 alt="Jared Veldheer"
                 className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full object-cover border-4 border-veldheer-gold shadow-2xl"
               />
