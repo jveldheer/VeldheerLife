@@ -36,10 +36,11 @@ const Contact = () => {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with actual key
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Get your free key at https://web3forms.com
           subject: `New Partnership Inquiry from ${formState.name}`,
           from_name: formState.name,
           email: formState.email,
+          to: 'jared@veldheerlife.com', // Recipient email
           company: formState.company,
           partnership_type: formState.interest,
           message: formState.message,
