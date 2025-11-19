@@ -9,39 +9,41 @@ const Brands = () => {
   const partners = [
     {
       name: 'Nike',
-      description: 'Shared real world feedback from twelve seasons in the league on what big athletes actually need from gear, fit, and footwear'
+      logo: '/images/nike-logo.png',
+      description: 'Contracted Nike athlete who worked closely with the brand for 12 years during his NFL career, providing insight on what big athletes need from gear, fit, and footwear'
     },
     {
       name: 'Traeger',
-      description: 'Created game day and family cooking centered on live fire flavor, performance minded recipes, and approachable backyard content'
+      logo: '/images/traeger-logo.png',
+      description: 'Used Traeger as a staple in home cooking and during his time as lunch program director at St. Paul The Apostle Elementary School, creating performance minded recipes and live fire content'
     },
     {
       name: 'US Wellness Meats',
+      logo: '/images/us-wellness-logo.png',
       description: 'Highlighted the value of high quality animal protein, regenerative practices, and practical ways athletes and families can eat for strength'
     },
     {
       name: 'HexClad',
+      logo: '/images/hexclad-logo.png',
       description: 'Featured HexClad cookware in the kitchen and on camera, matching durable pans with high powered recipes for athletes and families'
     },
     {
       name: 'Thorne',
+      logo: '/images/thorne-logo.png',
       description: 'Used the same supplement line trusted in NFL locker rooms to teach athletes how to support recovery, sleep, and overall health with evidence based products'
     },
   ]
 
   const partnershipLanes = [
     {
-      icon: '⌚',
       title: 'Performance Technology',
       description: 'Wearables, health technology, and recovery tools'
     },
     {
-      icon: '🥩',
       title: 'Food & Grocery',
       description: 'Meat, better-for-you CPG products, and real ingredients'
     },
     {
-      icon: '👨‍👩‍👧‍👦',
       title: 'Family & Kids',
       description: 'Food brands that care about real performance and health'
     },
@@ -51,7 +53,7 @@ const Brands = () => {
     <section
       id="brands"
       ref={ref}
-      className="relative py-24 md:py-32 bg-veldheer-dark"
+      className="relative pt-40 pb-32 md:pt-56 md:pb-40 lg:pt-72 lg:pb-56 xl:pt-80 xl:pb-64 bg-veldheer-dark"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -61,7 +63,7 @@ const Brands = () => {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <motion.div
@@ -84,7 +86,7 @@ const Brands = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body"
+            className="text-base md:text-lg lg:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body font-normal"
           >
             Jared has partnered with respected names in sport, cooking, and human performance. These collaborations have included product insight from an NFL veteran, athlete education, live events, and ongoing ambassador roles.
           </motion.p>
@@ -107,16 +109,26 @@ const Brands = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                  className="bg-veldheer-gray p-8 border-b-4 border-veldheer-gold hover:bg-veldheer-accent transition-all duration-300 transform hover:scale-105"
+                  className="group bg-gradient-to-br from-veldheer-gray to-veldheer-accent p-8 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
                 >
-                  {/* Logo Placeholder */}
-                  <div className="h-24 flex items-center justify-center mb-6 bg-veldheer-dark/50 border-2 border-veldheer-gold/30">
-                    <span className="text-veldheer-gold font-display font-bold text-2xl">
+                  {/* Brand Logo & Name */}
+                  <div className="mb-6 text-center">
+                    <div className="flex justify-center mb-6">
+                      <div className="bg-white p-4 rounded-lg w-32 h-32 flex items-center justify-center">
+                        <img
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
+                    </div>
+                    <h4 className="text-2xl font-display font-bold text-veldheer-gold group-hover:text-white transition-colors duration-300">
                       {partner.name}
-                    </span>
+                    </h4>
+                    <div className="w-16 h-px bg-veldheer-gold mx-auto mt-3 group-hover:w-24 transition-all duration-300"></div>
                   </div>
 
-                  <p className="text-gray-300 leading-relaxed font-body text-center">
+                  <p className="text-gray-300 group-hover:text-white leading-relaxed font-body font-normal text-base md:text-lg text-center transition-colors duration-300">
                     {partner.description}
                   </p>
                 </motion.div>
@@ -134,7 +146,7 @@ const Brands = () => {
             <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4 text-center">
               Top Partnership Lanes for <span className="text-veldheer-gold">2025</span>
             </h3>
-            <p className="text-gray-400 text-center mb-10 font-body">
+            <p className="text-gray-400 text-center mb-10 font-body font-normal text-base md:text-lg">
               Strategic alignment opportunities for maximum impact
             </p>
 
@@ -147,11 +159,10 @@ const Brands = () => {
                   transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
                   className="text-center bg-veldheer-dark p-8 border-t-4 border-veldheer-gold"
                 >
-                  <div className="text-6xl mb-4">{lane.icon}</div>
                   <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3">
                     {lane.title}
                   </h4>
-                  <p className="text-gray-300 font-body leading-relaxed">
+                  <p className="text-gray-300 font-body font-normal leading-relaxed text-base md:text-lg">
                     {lane.description}
                   </p>
                 </motion.div>

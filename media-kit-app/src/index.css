@@ -1,8 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700;800&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Updated spacing system - v2.0 */
+
+@theme {
+  /* Custom Colors */
+  --color-veldheer-dark: #0a0a0a;
+  --color-veldheer-gray: #1a1a1a;
+  --color-veldheer-gold: #c9a961;
+  --color-veldheer-bronze: #8b6914;
+  --color-veldheer-accent: #2a2a2a;
+
+  /* Custom Font Families */
+  --font-family-display: 'Playfair Display', serif;
+  --font-family-body: 'Work Sans', sans-serif;
+  --font-family-heading: 'Montserrat', sans-serif;
+
+  /* Custom Animations */
+  --animate-fade-in: fade-in 0.8s ease-in-out;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-slide-in-left: slide-in-left 0.8s ease-out;
+  --animate-slide-in-right: slide-in-right 0.8s ease-out;
+
+  /* Keyframes */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
 
 * {
   margin: 0;
@@ -16,7 +79,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #0a0a0a;
@@ -48,8 +111,22 @@ body {
   color: #0a0a0a;
 }
 
-/* Smooth animations */
+/* Custom font utilities and animations */
 @layer utilities {
+  /* Font family utilities */
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  /* Smooth animations */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);

@@ -16,7 +16,7 @@ const LinemanVault = () => {
 
   const proofPoints = [
     { number: '100+', label: 'Current Paying Members' },
-    { number: '7', label: 'Years of Youth Camps' },
+    { number: '1', label: 'Year Platform Active' },
     { number: '12', label: 'NFL Seasons of Experience' },
   ]
 
@@ -24,9 +24,9 @@ const LinemanVault = () => {
     <section
       id="vault"
       ref={ref}
-      className="relative py-24 md:py-32 bg-veldheer-gray"
+      className="relative pt-40 pb-32 md:pt-56 md:pb-40 lg:pt-72 lg:pb-56 xl:pt-80 xl:pb-64 bg-veldheer-gray"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <motion.div
@@ -54,7 +54,7 @@ const LinemanVault = () => {
               <h3 className="text-3xl font-display font-bold text-white mb-6">
                 What the <span className="text-veldheer-gold">Vault</span> Is
               </h3>
-              <p className="text-xl text-gray-300 leading-relaxed font-body mb-8">
+              <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed font-body font-normal mb-8">
                 The Veldheer Lineman Vault is Jared's performance home base. It is an online community and training platform for offensive linemen who want an honest, practical blueprint to get stronger, faster, and more skilled on the field.
               </p>
 
@@ -65,34 +65,89 @@ const LinemanVault = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                    className="flex items-start bg-veldheer-accent p-4 border-l-4 border-veldheer-gold"
+                    className="bg-veldheer-accent p-5 md:p-6 border-l-4 border-veldheer-gold flex items-start gap-4"
                   >
-                    <span className="text-veldheer-gold mr-4 text-2xl font-bold">▸</span>
-                    <span className="text-gray-300 text-lg font-body leading-relaxed">{feature}</span>
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-gray-300 text-base md:text-lg font-body font-normal leading-relaxed">
+                      {feature}
+                    </span>
                   </motion.li>
                 ))}
               </ul>
             </motion.div>
 
-            {/* Right Column - Image Placeholder */}
+            {/* Right Column - Value Highlights */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              className="space-y-6"
             >
-              <div className="aspect-square bg-veldheer-accent border-4 border-veldheer-gold overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-veldheer-gold/30">
-                  <div className="text-center p-8">
-                    <svg className="w-32 h-32 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+              {/* Platform Highlights */}
+              <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-2 border-veldheer-gold/30 p-8 md:p-10">
+                <h4 className="text-2xl font-display font-bold text-veldheer-gold mb-6">What Makes It Different</h4>
+                <div className="space-y-5 text-gray-300 font-body text-base md:text-lg leading-relaxed font-normal">
+                  <div className="flex items-start gap-4">
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <p className="font-heading text-sm tracking-wider uppercase">Insert Vault Training Photo</p>
+                    <p>
+                      <span className="text-veldheer-gold font-semibold">NFL-Tested:</span> Training methods proven at the highest level of football
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    <p>
+                      <span className="text-veldheer-gold font-semibold">Film Review:</span> Members can submit their own game film for personalized feedback
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                    </svg>
+                    <p>
+                      <span className="text-veldheer-gold font-semibold">Real Nutrition:</span> Meal plans and recipes built for big athletes who need real fuel
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <p>
+                      <span className="text-veldheer-gold font-semibold">Community Support:</span> Direct access to Jared and a brotherhood of linemen at every level
+                    </p>
                   </div>
                 </div>
               </div>
-              {/* Decorative Element */}
-              <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-veldheer-gold -z-10"></div>
+
+              {/* Training Image */}
+              <div className="relative overflow-hidden group">
+                <img
+                  src="/images/vlvl16x9.png"
+                  alt="Veldheer Lineman Vault"
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark via-transparent to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-white font-heading font-bold text-lg">Real Training. Real Results.</p>
+                </div>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-veldheer-accent border-l-4 border-veldheer-gold p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-veldheer-gold mb-2">100+</div>
+                  <div className="text-sm text-gray-400 uppercase tracking-wide">Active Members</div>
+                </div>
+                <div className="bg-veldheer-accent border-l-4 border-veldheer-gold p-6 text-center">
+                  <div className="text-3xl font-display font-bold text-veldheer-gold mb-2">1</div>
+                  <div className="text-sm text-gray-400 uppercase tracking-wide">Year Active</div>
+                </div>
+              </div>
             </motion.div>
           </div>
 
@@ -140,7 +195,7 @@ const LinemanVault = () => {
             </div>
 
             <div className="relative z-10">
-              <p className="text-2xl md:text-3xl lg:text-4xl font-display font-semibold text-veldheer-dark mb-8 leading-relaxed italic text-center">
+              <p className="text-xl md:text-2xl lg:text-3xl font-display font-semibold text-veldheer-dark mb-8 leading-relaxed italic text-center">
                 "Jared was one of my all time favorite teammates, smart, honest, and a true technician. The way he approached the game was thoughtful, disciplined, and all about mastering the details. Anyone learning from him is in great hands."
               </p>
 

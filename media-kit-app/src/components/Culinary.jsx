@@ -23,7 +23,7 @@ const Culinary = () => {
     <section
       id="culinary"
       ref={ref}
-      className="relative py-24 md:py-32 bg-veldheer-dark"
+      className="relative pt-40 pb-32 md:pt-56 md:pb-40 lg:pt-72 lg:pb-56 xl:pt-80 xl:pb-64 bg-veldheer-dark"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -33,14 +33,14 @@ const Culinary = () => {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-center mb-20 lg:mb-28"
           >
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6">
               Culinary Lane & <span className="text-veldheer-gold">Next Level Chef</span>
@@ -56,12 +56,45 @@ const Culinary = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body"
+            className="text-base md:text-lg lg:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body font-normal"
           >
             Under the Veldheer Life umbrella, food is not a side project. It is one of the main tools Jared uses to change lives. The same discipline that carried him through twelve NFL seasons now shows up on the cutting board and the stove.
           </motion.p>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
+          {/* Cooking Images Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20 lg:mb-28"
+          >
+            <div className="relative overflow-hidden group">
+              <img
+                src="/images/cooking-main.jpg"
+                alt="Jared cooking in the kitchen"
+                className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <img
+                src="/images/cooking-dish.jpg"
+                alt="High-performance meal"
+                className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative overflow-hidden group">
+              <img
+                src="/images/cooking-family.jpg"
+                alt="Family-friendly cooking"
+                className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 mb-20 lg:mb-28">
             {/* Left Column - What Jared Cooks */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -79,9 +112,12 @@ const Culinary = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    className="bg-veldheer-accent p-6 border-l-4 border-veldheer-gold"
+                    className="bg-veldheer-accent p-6 md:p-7 border-l-4 border-veldheer-gold flex items-start gap-4"
                   >
-                    <p className="text-gray-300 text-lg leading-relaxed font-body">
+                    <svg className="w-6 h-6 text-veldheer-gold flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p className="text-gray-300 text-base md:text-lg leading-relaxed font-body font-normal">
                       {item}
                     </p>
                   </motion.div>
@@ -92,45 +128,81 @@ const Culinary = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.9 }}
-                className="mt-8 p-6 bg-veldheer-gray border-2 border-veldheer-gold"
+                className="mt-8 p-6 md:p-8 bg-veldheer-gray border-2 border-veldheer-gold"
               >
-                <p className="text-lg text-gray-300 font-body leading-relaxed italic">
-                  <span className="text-veldheer-gold font-semibold">Signature style includes</span> high powered protein bowls, smart uses of meat and eggs, big flavor sauces, and simple cooking methods that do not require a restaurant kitchen or a culinary degree.
-                </p>
+                <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-4">Signature Style</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
+                    <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>High powered protein bowls</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
+                    <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Smart uses of meat and eggs</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
+                    <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Big flavor sauces</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
+                    <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Simple methods that work in any kitchen</span>
+                  </li>
+                </ul>
               </motion.div>
             </motion.div>
 
-            {/* Right Column - Image Placeholder */}
+            {/* Right Column - Culinary Highlights */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-6"
             >
-              {/* Large Image Placeholder */}
-              <div className="aspect-video bg-veldheer-accent border-4 border-veldheer-gold overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-veldheer-gold/30">
-                  <div className="text-center">
-                    <svg className="w-24 h-24 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
-                    </svg>
-                    <p className="font-heading text-sm tracking-wider uppercase">Insert Cooking Photo</p>
+              {/* Key Culinary Stats */}
+              <div className="bg-gradient-to-br from-veldheer-gold/10 to-veldheer-bronze/5 border-2 border-veldheer-gold/30 p-8">
+                <h4 className="text-2xl font-display font-bold text-veldheer-gold mb-6">Culinary Credentials</h4>
+                <div className="space-y-4">
+                  <div className="border-l-4 border-veldheer-gold pl-4 py-2">
+                    <div className="font-heading font-bold text-white text-lg">Season 5 Cast Member</div>
+                    <div className="text-gray-400 font-body">Next Level Chef on FOX</div>
+                  </div>
+                  <div className="border-l-4 border-veldheer-gold pl-4 py-2">
+                    <div className="font-heading font-bold text-white text-lg">School Lunch Man</div>
+                    <div className="text-gray-400 font-body">Served real food to hundreds of kids</div>
+                  </div>
+                  <div className="border-l-4 border-veldheer-gold pl-4 py-2">
+                    <div className="font-heading font-bold text-white text-lg">Performance Nutrition</div>
+                    <div className="text-gray-400 font-body">12 years fueling an NFL body</div>
                   </div>
                 </div>
               </div>
 
-              {/* Small Image Placeholders */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-square bg-veldheer-accent border-2 border-veldheer-gold overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-veldheer-gold/30">
-                    <p className="font-heading text-xs tracking-wider uppercase text-center p-2">Plated Dish</p>
-                  </div>
-                </div>
-                <div className="aspect-square bg-veldheer-accent border-2 border-veldheer-gold overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-veldheer-gold/30">
-                    <p className="font-heading text-xs tracking-wider uppercase text-center p-2">Family Dinner</p>
-                  </div>
-                </div>
+              {/* Content Themes */}
+              <div className="bg-veldheer-accent border-l-4 border-veldheer-gold p-6">
+                <h4 className="text-xl font-heading font-bold text-white mb-4">Popular Content Themes</h4>
+                <ul className="space-y-3 text-gray-300 font-body">
+                  <li className="pl-4 border-l-2 border-veldheer-gold/50 py-1">
+                    High-protein meal prep
+                  </li>
+                  <li className="pl-4 border-l-2 border-veldheer-gold/50 py-1">
+                    Budget-friendly family dinners
+                  </li>
+                  <li className="pl-4 border-l-2 border-veldheer-gold/50 py-1">
+                    Live fire and grill cooking
+                  </li>
+                  <li className="pl-4 border-l-2 border-veldheer-gold/50 py-1">
+                    Game day recipes
+                  </li>
+                </ul>
               </div>
             </motion.div>
           </div>
@@ -140,29 +212,45 @@ const Culinary = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 1 }}
-            className="bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 md:p-16 border-4 border-veldheer-gold mb-16"
+            className="relative bg-gradient-to-br from-veldheer-dark via-veldheer-gray to-veldheer-dark overflow-hidden mb-16 border-4 border-veldheer-gold"
           >
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-                  <span className="text-veldheer-gold">Next Level Chef</span> on FOX
-                </h3>
-                <p className="text-xl text-gray-300 leading-relaxed font-body mb-6">
-                  On Season 5 of Next Level Chef Jared brings the Veldheer Life philosophy into one of the most intense cooking environments on television. Under the mentorship of world class chefs he combines NFL level composure with real food cooking to prove that performance food can be exciting, bold, and fun to watch.
-                </p>
-                <div className="inline-block bg-veldheer-gold text-veldheer-dark px-6 py-3 font-heading font-bold text-lg tracking-wider uppercase">
-                  Season 5 Cast Member
-                </div>
-              </div>
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0">
+              <img
+                src="/images/next-Level-chef.Jpg"
+                alt="Next Level Chef Season 5"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-veldheer-dark/90 via-veldheer-dark/85 to-veldheer-dark/90"></div>
+            </div>
 
-              <div className="aspect-video bg-veldheer-dark border-4 border-veldheer-gold overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-veldheer-gold/30">
-                  <div className="text-center">
-                    <svg className="w-32 h-32 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                    </svg>
-                    <p className="font-heading text-sm tracking-wider uppercase">Insert Next Level Chef Still</p>
-                  </div>
+            <div className="relative z-10 text-center max-w-4xl mx-auto p-8 md:p-12 lg:p-16">
+              <div className="inline-block bg-veldheer-gold px-6 py-3 mb-6">
+                <span className="text-veldheer-dark font-heading font-bold text-sm tracking-widest uppercase">Featured On National Television</span>
+              </div>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+                Next Level Chef <span className="block mt-2 text-veldheer-gold">Season 5 on FOX</span>
+              </h3>
+              <p className="text-base md:text-lg text-gray-200 leading-relaxed font-body font-normal mb-8 max-w-3xl mx-auto">
+                Bringing the Veldheer Life philosophy to one of TV's most intense cooking competitions under the mentorship of world-class chefs.
+              </p>
+
+              {/* Key Highlights */}
+              <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-2xl mx-auto">
+                <div className="bg-veldheer-dark/60 backdrop-blur-sm border-2 border-veldheer-gold/50 p-4 md:p-6">
+                  <svg className="w-8 h-8 md:w-10 md:h-10 text-veldheer-gold mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                    <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+                  </svg>
+                  <p className="text-white font-heading font-bold text-base md:text-lg">Millions of Viewers</p>
+                  <p className="text-gray-400 text-sm mt-1">National primetime audience</p>
+                </div>
+                <div className="bg-veldheer-dark/60 backdrop-blur-sm border-2 border-veldheer-gold/50 p-4 md:p-6">
+                  <svg className="w-8 h-8 md:w-10 md:h-10 text-veldheer-gold mx-auto mb-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                  <p className="text-white font-heading font-bold text-base md:text-lg">Gordon Ramsay</p>
+                  <p className="text-gray-400 text-sm mt-1">World-class mentorship</p>
                 </div>
               </div>
             </div>
