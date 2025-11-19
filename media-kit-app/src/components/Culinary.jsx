@@ -61,36 +61,50 @@ const Culinary = () => {
             Under the Veldheer Life umbrella, food is not a side project. It is one of the main tools Jared uses to change lives. The same discipline that carried him through twelve NFL seasons now shows up on the cutting board and the stove.
           </motion.p>
 
-          {/* Cooking Images Grid */}
+          {/* Cooking Images Carousel */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-20 lg:mb-28"
+            className="mb-20 lg:mb-28"
           >
-            <div className="relative overflow-hidden group">
-              <img
-                src="/images/cooking-main.jpg"
-                alt="Jared cooking in the kitchen"
-                className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div className="relative overflow-hidden group">
-              <img
-                src="/images/cooking-dish.jpg"
-                alt="High-performance meal"
-                className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-            <div className="relative overflow-hidden group">
-              <img
-                src="/images/cooking-family.jpg"
-                alt="Family-friendly cooking"
-                className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="relative">
+              {/* Horizontal Scroll Container */}
+              <div className="overflow-x-auto scrollbar-hide pb-4">
+                <div className="flex gap-6 lg:gap-8 min-w-max px-4 md:px-0">
+                  <div className="relative overflow-hidden group w-[320px] md:w-[400px] lg:w-[480px] flex-shrink-0">
+                    <img
+                      src="/images/cooking-main.jpg"
+                      alt="Jared cooking in the kitchen"
+                      className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="relative overflow-hidden group w-[320px] md:w-[400px] lg:w-[480px] flex-shrink-0">
+                    <img
+                      src="/images/cooking-dish.jpg"
+                      alt="High-performance meal"
+                      className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="relative overflow-hidden group w-[320px] md:w-[400px] lg:w-[480px] flex-shrink-0">
+                    <img
+                      src="/images/cooking-family.jpg"
+                      alt="Family-friendly cooking"
+                      className="w-full h-72 md:h-80 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-veldheer-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Scroll Indicator */}
+              <div className="text-center mt-4">
+                <p className="text-veldheer-gold/60 text-sm font-heading tracking-wider uppercase">
+                  ← Scroll to explore →
+                </p>
+              </div>
             </div>
           </motion.div>
 
