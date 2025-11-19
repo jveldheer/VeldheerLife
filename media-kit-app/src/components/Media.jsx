@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 const Media = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [isExpanded, setIsExpanded] = useState(false)
 
   const mediaFeatures = [
     {
@@ -98,7 +99,7 @@ const Media = () => {
 
           {/* Media Features Grid */}
           <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-            {mediaFeatures.map((feature, index) => (
+            {mediaFeatures.slice(0, isExpanded ? mediaFeatures.length : 2).map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -148,6 +149,30 @@ const Media = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Expand/Collapse Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="mt-10 text-center"
+          >
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="group inline-flex items-center gap-3 bg-veldheer-gold hover:bg-veldheer-bronze text-veldheer-dark px-8 py-4 font-heading font-bold text-base md:text-lg tracking-wide uppercase transition-all duration-300 border-2 border-veldheer-gold hover:border-veldheer-bronze"
+            >
+              <span>{isExpanded ? 'Show Less' : 'View All Media Features'}</span>
+              <svg
+                className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                strokeWidth={2.5}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </motion.div>
 
           {/* Additional Context */}
           <motion.div
