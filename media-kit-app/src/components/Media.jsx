@@ -9,6 +9,13 @@ const Media = () => {
 
   const mediaFeatures = [
     {
+      title: 'Next Level Chef Season 5',
+      description: 'Cast member on Gordon Ramsay\'s hit cooking competition series on FOX, where Jared brings his lineman mentality into the kitchen and shows what performance based cooking looks like under real pressure',
+      type: 'Television',
+      featured: true,
+      logo: '/images/NLC-logo.png'
+    },
+    {
       title: 'NFL Films',
       description: 'Coverage that brings viewers inside life in the trenches and the mindset it takes to play offensive line at the highest level',
       type: 'Television',
@@ -25,13 +32,6 @@ const Media = () => {
       description: 'National feature on Jared\'s work as an elementary school lunch man, focused on how he brought real food and performance nutrition thinking into school meals for kids',
       type: 'Television',
       logo: '/images/today-logo.png'
-    },
-    {
-      title: 'Next Level Chef Season 5',
-      description: 'Cast member on Gordon Ramsay\'s hit cooking competition series on FOX, where Jared brings his lineman mentality into the kitchen and shows what performance based cooking looks like under real pressure',
-      type: 'Television',
-      featured: true,
-      logo: '/images/NLC-logo.png'
     },
     {
       title: 'The Washington Post',
@@ -99,29 +99,33 @@ const Media = () => {
 
           {/* Media Features Grid */}
           <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-            {mediaFeatures.slice(0, isExpanded ? mediaFeatures.length : 2).map((feature, index) => (
+            {mediaFeatures.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className={`relative bg-veldheer-accent p-8 ${
-                  feature.featured
-                    ? 'md:col-span-2 border-4 border-veldheer-gold'
-                    : 'border-t-4 border-veldheer-gold'
+                className={`relative bg-veldheer-accent transition-all duration-300 ${
+                  isExpanded
+                    ? feature.featured
+                      ? 'md:col-span-2 border-4 border-veldheer-gold p-8'
+                      : 'border-t-4 border-veldheer-gold p-8'
+                    : 'border-t-4 border-veldheer-gold p-6'
                 }`}
               >
-                {feature.featured && (
+                {feature.featured && isExpanded && (
                   <div className="absolute top-0 right-0 bg-veldheer-gold text-veldheer-dark px-6 py-3 font-heading font-bold text-xs md:text-sm tracking-wider uppercase max-w-xs text-center">
                     Premiers January 29th, 2026
                   </div>
                 )}
 
-                <div className="flex items-start justify-between mb-4">
+                <div className={`flex items-start justify-between ${isExpanded ? 'mb-4' : 'mb-0'}`}>
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-3">
                       {feature.logo && (
-                        <div className="flex-shrink-0 bg-white p-2 rounded w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
+                        <div className={`flex-shrink-0 bg-white p-2 rounded flex items-center justify-center ${
+                          isExpanded ? 'w-12 h-12 md:w-14 md:h-14' : 'w-10 h-10 md:w-12 md:h-12'
+                        }`}>
                           <img
                             src={feature.logo}
                             alt={`${feature.title} logo`}
@@ -130,7 +134,11 @@ const Media = () => {
                         </div>
                       )}
                       <h3 className={`font-display font-bold text-white ${
-                        feature.featured ? 'text-3xl md:text-4xl' : 'text-2xl md:text-3xl'
+                        isExpanded
+                          ? feature.featured
+                            ? 'text-3xl md:text-4xl'
+                            : 'text-2xl md:text-3xl'
+                          : 'text-xl md:text-2xl'
                       }`}>
                         {feature.title}
                       </h3>
@@ -141,11 +149,18 @@ const Media = () => {
                   </div>
                 </div>
 
-                <p className={`text-gray-300 leading-relaxed font-body ${
-                  feature.featured ? 'text-lg md:text-xl' : 'text-base md:text-lg'
-                }`}>
-                  {feature.description}
-                </p>
+                {isExpanded && (
+                  <motion.p
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    transition={{ duration: 0.3 }}
+                    className={`text-gray-300 leading-relaxed font-body ${
+                      feature.featured ? 'text-lg md:text-xl' : 'text-base md:text-lg'
+                    }`}
+                  >
+                    {feature.description}
+                  </motion.p>
+                )}
               </motion.div>
             ))}
           </div>
@@ -161,7 +176,7 @@ const Media = () => {
               onClick={() => setIsExpanded(!isExpanded)}
               className="group inline-flex items-center gap-3 bg-veldheer-gold hover:bg-veldheer-bronze text-veldheer-dark px-8 py-4 font-heading font-bold text-base md:text-lg tracking-wide uppercase transition-all duration-300 border-2 border-veldheer-gold hover:border-veldheer-bronze"
             >
-              <span>{isExpanded ? 'Show Less' : 'View All Media Features'}</span>
+              <span>{isExpanded ? 'Show Less' : 'Read More Details'}</span>
               <svg
                 className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
                 fill="none"
