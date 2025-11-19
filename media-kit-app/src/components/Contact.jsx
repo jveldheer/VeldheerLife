@@ -160,38 +160,28 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Partnership Inquiry Form */}
+          {/* Partnership Inquiry CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="mb-16"
           >
-            <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-6 text-center">
-              Submit a <span className="text-veldheer-gold">Partnership Inquiry</span>
-            </h3>
-            <p className="text-lg text-gray-400 text-center mb-8 font-body">
-              Fill out the form below and we'll get back to you within 48 hours
-            </p>
-
-            {/* Google Form Embed */}
-            <div className="max-w-4xl mx-auto bg-veldheer-accent p-8 border-4 border-veldheer-gold">
-              <div className="bg-white p-1">
-                {/* Replace the src URL below with your actual Google Form embed URL */}
-                <iframe
-                  src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
-                  width="100%"
-                  height="800"
-                  frameBorder="0"
-                  marginHeight="0"
-                  marginWidth="0"
-                  className="w-full"
-                >
-                  Loading…
-                </iframe>
-              </div>
-              <p className="text-sm text-gray-500 mt-4 text-center font-body italic">
-                All inquiries are handled directly through our secure Google Forms system
+            <div className="max-w-4xl mx-auto bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-12 md:p-16 border-4 border-veldheer-gold text-center">
+              <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                Ready to <span className="text-veldheer-gold">Partner?</span>
+              </h3>
+              <p className="text-xl text-gray-300 mb-10 font-body leading-relaxed max-w-2xl mx-auto">
+                Let's discuss how Veldheer Life can bring authentic value to your brand through content, partnerships, and community engagement.
+              </p>
+              <a
+                href="mailto:jared@veldheerlife.com?subject=Partnership Inquiry - Media Kit"
+                className="inline-block bg-veldheer-gold hover:bg-veldheer-bronze text-veldheer-dark font-display font-bold text-xl px-12 py-6 transition-all duration-300 transform hover:scale-105 uppercase tracking-wide"
+              >
+                Send Partnership Inquiry →
+              </a>
+              <p className="text-sm text-gray-400 mt-6 font-body italic">
+                We typically respond within 48 hours
               </p>
             </div>
           </motion.div>
