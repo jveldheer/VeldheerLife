@@ -6,44 +6,59 @@ const Brands = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  const partners = [
+  const partnerCategories = [
     {
-      name: 'Nike',
-      description: 'Shared real world feedback from twelve seasons in the league on what big athletes actually need from gear, fit, and footwear'
+      category: 'Major Sports Apparel Brand',
+      icon: '👟',
+      description: 'Provided real-world feedback from 12 NFL seasons on what elite athletes need from gear, fit, and footwear',
+      value: 'Product Development & Athlete Insights'
     },
     {
-      name: 'Traeger',
-      description: 'Created game day and family cooking centered on live fire flavor, performance minded recipes, and approachable backyard content'
+      category: 'Premium Outdoor Cooking Equipment',
+      icon: '🔥',
+      description: 'Created game day and family cooking content centered on live-fire flavor and approachable outdoor recipes',
+      value: 'Content Creation & Recipe Development'
     },
     {
-      name: 'US Wellness Meats',
-      description: 'Highlighted the value of high quality animal protein, regenerative practices, and practical ways athletes and families can eat for strength'
+      category: 'Regenerative Meat Producer',
+      icon: '🥩',
+      description: 'Highlighted high-quality animal protein, regenerative practices, and practical nutrition for athletes and families',
+      value: 'Brand Storytelling & Education'
     },
     {
-      name: 'HexClad',
-      description: 'Featured HexClad cookware in the kitchen and on camera, matching durable pans with high powered recipes for athletes and families'
+      category: 'Heritage Cookware Company',
+      icon: '🍳',
+      description: 'Featured premium cookware in authentic kitchen content, pairing durable products with high-performance recipes',
+      value: 'Product Integration & Demonstration'
     },
     {
-      name: 'Thorne',
-      description: 'Used the same supplement line trusted in NFL locker rooms to teach athletes how to support recovery, sleep, and overall health with evidence based products'
+      category: 'Advanced Health & Recovery Technology',
+      icon: '💊',
+      description: 'Educated athletes on evidence-based supplementation and recovery strategies trusted in professional sports',
+      value: 'Athlete Education & Trust Building'
     },
   ]
 
-  const partnershipLanes = [
+  const partnershipOpportunities = [
     {
-      icon: '⌚',
-      title: 'Performance Technology',
-      description: 'Wearables, health technology, and recovery tools'
+      icon: '⚡',
+      title: 'Performance & Sports Technology',
+      description: 'Wearables, recovery tools, and health tracking systems for serious athletes'
     },
     {
-      icon: '🥩',
-      title: 'Food & Grocery',
-      description: 'Meat, better-for-you CPG products, and real ingredients'
+      icon: '🥘',
+      title: 'Food & Nutrition Brands',
+      description: 'Meat, better-for-you CPG, pantry staples, and real ingredients'
     },
     {
       icon: '👨‍👩‍👧‍👦',
-      title: 'Family & Kids',
-      description: 'Food brands that care about real performance and health'
+      title: 'Family & Youth Focused',
+      description: 'Brands committed to real performance and health for the next generation'
+    },
+    {
+      icon: '🏋️',
+      title: 'Training & Equipment',
+      description: 'Gym equipment, coaching tools, and performance gear'
     },
   ]
 
@@ -70,12 +85,12 @@ const Brands = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6">
-              Brands & <span className="text-veldheer-gold">Partners</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+              Partnership <span className="text-veldheer-gold">Experience</span>
             </h2>
             <div className="w-24 h-1 bg-veldheer-gold mx-auto mb-6"></div>
-            <p className="text-2xl text-gray-400 font-heading font-medium">
-              Brands That Trust Veldheer Life
+            <p className="text-xl md:text-2xl text-gray-400 font-heading font-medium max-w-3xl mx-auto">
+              Proven Track Record Across Multiple Brand Categories
             </p>
           </motion.div>
 
@@ -86,10 +101,10 @@ const Brands = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body"
           >
-            Jared has partnered with respected names in sport, cooking, and human performance. These collaborations have included product insight from an NFL veteran, athlete education, live events, and ongoing ambassador roles.
+            Jared has partnered with leaders across sports, cooking, and performance categories. Each collaboration focuses on delivering value, not just visibility—connecting authentic storytelling with measurable results.
           </motion.p>
 
-          {/* Selected Collaborations */}
+          {/* Past Partnership Categories */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -97,34 +112,51 @@ const Brands = () => {
             className="mb-20"
           >
             <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-10 text-center">
-              Selected <span className="text-veldheer-gold">Collaborations</span>
+              Past Partnership <span className="text-veldheer-gold">Categories</span>
             </h3>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {partners.map((partner, index) => (
+              {partnerCategories.map((partner, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                  className="bg-veldheer-gray p-8 border-b-4 border-veldheer-gold hover:bg-veldheer-accent transition-all duration-300 transform hover:scale-105"
+                  className="bg-veldheer-gray p-8 border-b-4 border-veldheer-gold hover:bg-veldheer-accent transition-all duration-300"
                 >
-                  {/* Logo Placeholder */}
-                  <div className="h-24 flex items-center justify-center mb-6 bg-veldheer-dark/50 border-2 border-veldheer-gold/30">
-                    <span className="text-veldheer-gold font-display font-bold text-2xl">
-                      {partner.name}
-                    </span>
-                  </div>
+                  {/* Icon */}
+                  <div className="text-5xl mb-6">{partner.icon}</div>
 
-                  <p className="text-gray-300 leading-relaxed font-body text-center">
+                  {/* Category */}
+                  <h4 className="text-xl font-display font-bold text-veldheer-gold mb-4">
+                    {partner.category}
+                  </h4>
+
+                  {/* Description */}
+                  <p className="text-gray-300 leading-relaxed font-body mb-4">
                     {partner.description}
                   </p>
+
+                  {/* Value Delivered */}
+                  <div className="pt-4 border-t-2 border-veldheer-gold/30">
+                    <p className="text-sm font-heading text-veldheer-bronze uppercase tracking-wide mb-1">
+                      Value Delivered
+                    </p>
+                    <p className="text-white font-body text-sm">
+                      {partner.value}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
+
+            {/* Confidentiality Note */}
+            <p className="text-center text-gray-500 font-body italic mt-8">
+              *Specific brand names and detailed metrics available upon request under NDA
+            </p>
           </motion.div>
 
-          {/* Top Partnership Lanes */}
+          {/* Partnership Opportunities for 2025 */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -132,14 +164,14 @@ const Brands = () => {
             className="bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 md:p-16 border-4 border-veldheer-gold"
           >
             <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-4 text-center">
-              Top Partnership Lanes for <span className="text-veldheer-gold">2025</span>
+              Open Partnership Categories for <span className="text-veldheer-gold">2025</span>
             </h3>
-            <p className="text-gray-400 text-center mb-10 font-body">
-              Strategic alignment opportunities for maximum impact
+            <p className="text-gray-400 text-center mb-10 font-body text-lg">
+              We work collaboratively with each partner to meet their unique goals
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {partnershipLanes.map((lane, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {partnershipOpportunities.map((opportunity, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -147,12 +179,12 @@ const Brands = () => {
                   transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
                   className="text-center bg-veldheer-dark p-8 border-t-4 border-veldheer-gold"
                 >
-                  <div className="text-6xl mb-4">{lane.icon}</div>
-                  <h4 className="text-xl font-heading font-bold text-veldheer-gold mb-3">
-                    {lane.title}
+                  <div className="text-5xl mb-4">{opportunity.icon}</div>
+                  <h4 className="text-lg font-heading font-bold text-veldheer-gold mb-3">
+                    {opportunity.title}
                   </h4>
-                  <p className="text-gray-300 font-body leading-relaxed">
-                    {lane.description}
+                  <p className="text-gray-300 font-body leading-relaxed text-sm">
+                    {opportunity.description}
                   </p>
                 </motion.div>
               ))}

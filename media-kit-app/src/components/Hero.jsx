@@ -45,16 +45,16 @@ const Hero = ({ opacity }) => {
 
           {/* Hero Tagline */}
           <motion.p
-            className="text-xl md:text-2xl lg:text-3xl font-heading font-medium text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-veldheer-gold max-w-4xl mx-auto leading-relaxed mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            Faith. Family. Food. Football. Performance.
+            High-Performance Food & Fitness for Athletes and Families
           </motion.p>
 
           <motion.p
-            className="text-lg md:text-xl lg:text-2xl font-body text-gray-400 max-w-3xl mx-auto mt-6 leading-relaxed"
+            className="text-lg md:text-xl lg:text-2xl font-body text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -62,12 +62,53 @@ const Hero = ({ opacity }) => {
             Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field
           </motion.p>
 
+          {/* Key Metrics Above the Fold */}
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            <div className="bg-veldheer-accent/80 backdrop-blur-sm p-6 border-b-4 border-veldheer-gold">
+              <div className="text-4xl md:text-5xl font-display font-bold text-veldheer-gold">
+                241K+
+              </div>
+              <div className="text-sm md:text-base text-gray-300 font-heading uppercase tracking-wide mt-2">
+                Total Social Followers
+              </div>
+            </div>
+            <div className="bg-veldheer-accent/80 backdrop-blur-sm p-6 border-b-4 border-veldheer-gold">
+              <div className="text-4xl md:text-5xl font-display font-bold text-veldheer-gold">
+                8M
+              </div>
+              <div className="text-sm md:text-base text-gray-300 font-heading uppercase tracking-wide mt-2">
+                Monthly Video Views
+              </div>
+            </div>
+            <div className="bg-veldheer-accent/80 backdrop-blur-sm p-6 border-b-4 border-veldheer-gold">
+              <div className="text-4xl md:text-5xl font-display font-bold text-veldheer-gold">
+                90%+
+              </div>
+              <div className="text-sm md:text-base text-gray-300 font-heading uppercase tracking-wide mt-2">
+                Male Audience
+              </div>
+            </div>
+            <div className="bg-veldheer-accent/80 backdrop-blur-sm p-6 border-b-4 border-veldheer-gold">
+              <div className="text-4xl md:text-5xl font-display font-bold text-veldheer-gold">
+                12
+              </div>
+              <div className="text-sm md:text-base text-gray-300 font-heading uppercase tracking-wide mt-2">
+                NFL Seasons
+              </div>
+            </div>
+          </motion.div>
+
           {/* CTA Button */}
           <motion.div
             className="mt-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
           >
             <a
               href="#contact"
@@ -87,7 +128,7 @@ const Hero = ({ opacity }) => {
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4, repeat: Infinity, repeatType: 'reverse', repeatDelay: 0.5 }}
+          transition={{ duration: 0.8, delay: 1.6, repeat: Infinity, repeatType: 'reverse', repeatDelay: 0.5 }}
         >
           <svg
             className="w-8 h-8 text-veldheer-gold"

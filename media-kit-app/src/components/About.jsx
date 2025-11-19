@@ -1,10 +1,11 @@
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 const About = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [showFullStory, setShowFullStory] = useState(false)
 
   return (
     <section
@@ -57,17 +58,57 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="space-y-6"
             >
+              {/* Condensed Bio */}
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-body">
-                Jared Veldheer is a twelve year NFL offensive lineman who has turned everything he learned in the trenches into a life mission. Under the Veldheer Life brand he coaches offensive linemen, builds real world strength programs, cooks high performance meals, and serves families who want better health and better food.
+                <span className="text-veldheer-gold font-bold">Jared Veldheer</span> is a 12-year NFL offensive lineman turned performance coach, chef, and community advocate. From the trenches to the kitchen, he teaches athletes and families how to fuel and move for real strength.
               </p>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-body">
-                After more than a decade in the league with a helmet on, Jared has worn an apron as an elementary school lunch man, stepped into the kitchen on <span className="text-veldheer-gold font-semibold">Season 5 of Next Level Chef on FOX</span>, and launched the Veldheer Lineman Vault to teach the next generation how to move, fuel, and live for real strength.
-              </p>
+              {/* Read Full Story Button */}
+              <button
+                onClick={() => setShowFullStory(!showFullStory)}
+                className="inline-flex items-center gap-2 text-veldheer-gold hover:text-veldheer-bronze font-heading font-bold text-lg uppercase tracking-wide transition-colors duration-300"
+              >
+                {showFullStory ? 'Hide Full Story' : 'Read Full Story'}
+                <svg
+                  className={`w-5 h-5 transition-transform duration-300 ${showFullStory ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
 
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-body">
-                Today Veldheer Life brings all of that together. Performance coaching for young athletes, nutrition and cooking content, faith centered family life, travel, and unscripted moments from a six foot eight former lineman who still loves the weight room as much as the kitchen.
-              </p>
+              {/* Expandable Full Story */}
+              <AnimatePresence>
+                {showFullStory && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="space-y-6 overflow-hidden"
+                  >
+                    <div className="pt-6 border-t-2 border-veldheer-gold/30 space-y-6">
+                      <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-body">
+                        After 12 seasons in the NFL protecting quarterbacks and opening holes for running backs, Jared didn't retire from making an impact—he just changed how he does it. Under the Veldheer Life brand, he coaches offensive linemen, builds real-world strength programs, cooks high-performance meals, and serves families who want better health and better food.
+                      </p>
+
+                      <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-body">
+                        After more than a decade in the league with a helmet on, Jared wore an apron as an elementary school lunch man, bringing real food and nutrition thinking to kids who needed it most. He stepped into the kitchen on <span className="text-veldheer-gold font-semibold">Season 5 of Next Level Chef on FOX</span>, and launched the Veldheer Lineman Vault to teach the next generation how to move, fuel, and live for real strength.
+                      </p>
+
+                      <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-body">
+                        Today, Veldheer Life brings all of that together: Performance coaching for young athletes, nutrition and cooking content that families actually use, faith-centered values, and unscripted moments from a 6'8" former lineman who still loves the weight room as much as the kitchen.
+                      </p>
+
+                      <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-body">
+                        His work has been featured on <span className="text-veldheer-gold font-semibold">NFL Films, All or Nothing (Amazon), The Today Show, and The Washington Post</span>. He's partnered with brands like Nike, Traeger, US Wellness Meats, HexClad, and Thorne to create authentic content that resonates with athletes, parents, and performance-minded families.
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               {/* Core Brand Statement */}
               <motion.div
@@ -77,7 +118,7 @@ const About = () => {
                 className="mt-10 p-6 bg-veldheer-dark border-l-4 border-veldheer-gold"
               >
                 <p className="text-lg md:text-xl font-heading font-semibold text-white leading-relaxed italic">
-                  "Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field, all while giving back to his community."
+                  "From the trenches to the kitchen—teaching the next generation how to fuel and move for real strength on and off the field."
                 </p>
               </motion.div>
             </motion.div>
