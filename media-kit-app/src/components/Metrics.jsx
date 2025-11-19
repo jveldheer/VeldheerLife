@@ -26,6 +26,7 @@ const CountUp = ({ end, duration = 2, isInView }) => {
 const Metrics = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [isExpanded, setIsExpanded] = useState(false)
 
   const stats = [
     { number: 241, label: 'Thousand Total Social Followers', suffix: 'K+' },
@@ -199,38 +200,75 @@ const Metrics = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                  className="bg-veldheer-gray p-8 border-l-4 border-veldheer-gold hover:bg-veldheer-accent transition-colors duration-300"
+                  className={`bg-veldheer-gray border-l-4 border-veldheer-gold hover:bg-veldheer-accent transition-all duration-300 ${
+                    isExpanded ? 'p-8' : 'p-6'
+                  }`}
                 >
-                  <div className="flex items-center justify-between mb-6">
+                  <div className={`flex items-center justify-between ${isExpanded ? 'mb-6' : 'mb-0'}`}>
                     <div className="flex items-center gap-4">
                       <div className="text-veldheer-gold flex-shrink-0">
                         {platform.icon}
                       </div>
                       <div>
-                        <h4 className="text-2xl font-heading font-bold text-white mb-1">
+                        <h4 className={`font-heading font-bold text-white ${isExpanded ? 'text-2xl mb-1' : 'text-xl'}`}>
                           {platform.name}
                         </h4>
-                        <p className="text-veldheer-gold font-body">{platform.handle}</p>
+                        {isExpanded && (
+                          <p className="text-veldheer-gold font-body">{platform.handle}</p>
+                        )}
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-3xl font-display font-bold text-veldheer-gold">
+                      <div className={`font-display font-bold text-veldheer-gold ${isExpanded ? 'text-3xl' : 'text-2xl'}`}>
                         {platform.followers}
                       </div>
-                      <div className="text-sm text-gray-400 uppercase tracking-wide">Followers</div>
+                      {isExpanded && (
+                        <div className="text-sm text-gray-400 uppercase tracking-wide">Followers</div>
+                      )}
                     </div>
                   </div>
 
-                  <ul className="space-y-2">
-                    {platform.highlights.map((highlight, i) => (
-                      <li key={i} className="pl-4 border-l-2 border-veldheer-gold/50 py-1 text-gray-300 font-body">
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
+                  {isExpanded && (
+                    <motion.ul
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      transition={{ duration: 0.3 }}
+                      className="space-y-2"
+                    >
+                      {platform.highlights.map((highlight, i) => (
+                        <li key={i} className="pl-4 border-l-2 border-veldheer-gold/50 py-1 text-gray-300 font-body">
+                          {highlight}
+                        </li>
+                      ))}
+                    </motion.ul>
+                  )}
                 </motion.div>
               ))}
             </div>
+
+            {/* Expand/Collapse Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className="mt-10 text-center"
+            >
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="group inline-flex items-center gap-3 bg-veldheer-gold hover:bg-veldheer-bronze text-veldheer-dark px-8 py-4 font-heading font-bold text-base md:text-lg tracking-wide uppercase transition-all duration-300 border-2 border-veldheer-gold hover:border-veldheer-bronze"
+              >
+                <span>{isExpanded ? 'Show Less' : 'View Detailed Metrics'}</span>
+                <svg
+                  className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </motion.div>
           </motion.div>
 
           {/* Why This Matters */}
