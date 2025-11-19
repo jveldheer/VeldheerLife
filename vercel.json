@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd media-kit-app && npm install && npm run build",
-  "outputDirectory": "media-kit-app/dist",
-  "installCommand": "cd media-kit-app && npm install",
-  "framework": "vite"
+  "buildCommand": "cd media-kit-app && npm run build",
+  "outputDirectory": "media-kit-app/dist"
 }
