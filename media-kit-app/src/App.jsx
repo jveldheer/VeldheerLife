@@ -5,10 +5,8 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Metrics from './components/Metrics'
 import Media from './components/Media'
-import Brands from './components/Brands'
 import LinemanVault from './components/LinemanVault'
 import Culinary from './components/Culinary'
-import Partnerships from './components/Partnerships'
 import Charity from './components/Charity'
 import Contact from './components/Contact'
 import './App.css'
@@ -24,10 +22,8 @@ function App() {
       <About />
       <Metrics />
       <Media />
-      <Brands />
       <LinemanVault />
       <Culinary />
-      <Partnerships />
       <Charity />
       <Contact />
     </div>

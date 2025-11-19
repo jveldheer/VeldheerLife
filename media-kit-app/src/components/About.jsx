@@ -18,20 +18,6 @@ const About = () => {
 
       <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Tagline Box */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto mb-20 lg:mb-28"
-          >
-            <div className="bg-veldheer-dark/85 backdrop-blur-sm p-8 md:p-10 lg:p-12 border-2 border-veldheer-gold/40">
-              <p className="text-lg md:text-xl lg:text-2xl font-body text-gray-100 leading-relaxed font-normal text-center">
-                Former NFL lineman teaching the next generation how to fuel and move for real strength on and off the field
-              </p>
-            </div>
-          </motion.div>
-
           {/* Section Title */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
