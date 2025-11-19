@@ -38,14 +38,11 @@ const About = () => {
               className="relative"
             >
               <div className="aspect-square bg-veldheer-accent rounded-none overflow-hidden border-4 border-veldheer-gold">
-                <div className="w-full h-full flex items-center justify-center text-veldheer-gold/30">
-                  <div className="text-center">
-                    <svg className="w-32 h-32 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                    </svg>
-                    <p className="font-heading text-sm tracking-wider uppercase">Insert Jared's Photo</p>
-                  </div>
-                </div>
+                <img
+                  src="/images/jared-profile.jpg"
+                  alt="Jared Veldheer - 12-year NFL veteran and performance coach"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Decorative Element */}
               <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-veldheer-gold -z-10"></div>

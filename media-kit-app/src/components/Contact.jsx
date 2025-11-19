@@ -144,7 +144,7 @@ const Contact = () => {
             </motion.div>
           </div>
 
-          {/* Headshot Placeholder */}
+          {/* Professional Headshot */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -152,14 +152,11 @@ const Contact = () => {
             className="mb-16"
           >
             <div className="max-w-md mx-auto aspect-square bg-veldheer-accent border-4 border-veldheer-gold overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-veldheer-gold/30">
-                <div className="text-center">
-                  <svg className="w-32 h-32 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                  </svg>
-                  <p className="font-heading text-sm tracking-wider uppercase">Insert Professional Headshot</p>
-                </div>
-              </div>
+              <img
+                src="/images/jared-media.jpg"
+                alt="Jared Veldheer - Professional headshot"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
