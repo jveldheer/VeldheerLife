@@ -46,18 +46,18 @@ const Charity = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-gradient-to-br from-veldheer-gold/10 to-transparent p-8 md:p-12 lg:p-16 border-l-4 border-veldheer-gold mb-12"
+            className="bg-gradient-to-br from-veldheer-gold/10 to-transparent p-12 md:p-16 lg:p-20 border-l-4 border-veldheer-gold mb-16"
           >
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-body font-normal text-center">
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 leading-loose font-body font-normal text-center">
               The <span className="text-veldheer-gold font-semibold">"Stay in the Game"</span> fund supports local youth charities and initiatives that help young athletes access the training, nutrition, and resources they need to reach their full potential.
             </p>
           </motion.div>
 
           {/* Expand/Collapse Button */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="bg-veldheer-gold text-veldheer-dark px-8 py-4 font-heading font-bold text-base md:text-lg uppercase tracking-wider hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-xl"
+              className="bg-veldheer-gold text-veldheer-dark px-10 py-5 font-heading font-bold text-base md:text-lg uppercase tracking-wider hover:bg-white transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               {isExpanded ? 'Show Less' : 'Read More About Stay in the Game'}
             </button>
@@ -75,9 +75,9 @@ const Charity = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-gradient-to-br from-veldheer-gold/10 to-transparent p-8 md:p-12 lg:p-16 border-l-4 border-veldheer-gold mb-12"
+                className="bg-gradient-to-br from-veldheer-gold/10 to-transparent p-12 md:p-16 lg:p-20 border-l-4 border-veldheer-gold mb-20"
               >
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-body font-normal text-center max-w-4xl mx-auto">
+                <p className="text-lg md:text-xl text-gray-300 leading-loose font-body font-normal text-center max-w-4xl mx-auto">
                   Through this fund, Jared partners with community organizations to provide equipment, coaching, nutrition education, and mentorship to kids who might otherwise be left on the sidelines.
                 </p>
               </motion.div>
@@ -88,16 +88,16 @@ const Charity = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-10 text-center">
+                <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center">
                   Where We <span className="text-veldheer-gold">Focus</span>
                 </h3>
 
-                <div className="grid md:grid-cols-3 gap-8 lg:gap-10 mb-12">
+                <div className="grid md:grid-cols-3 gap-10 lg:gap-12 mb-20">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.6 }}
-                    className="group bg-veldheer-accent p-8 lg:p-10 border-t-4 border-veldheer-gold hover:bg-veldheer-gray transition-colors duration-300"
+                    className="group bg-veldheer-accent p-10 lg:p-12 border-t-4 border-veldheer-gold hover:bg-veldheer-gray transition-colors duration-300"
                   >
                     <div className="mb-6">
                       <svg className="w-12 h-12 md:w-16 md:h-16 text-veldheer-gold mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -114,7 +114,7 @@ const Charity = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.7 }}
-                    className="group bg-veldheer-accent p-8 lg:p-10 border-t-4 border-veldheer-gold hover:bg-veldheer-gray transition-colors duration-300"
+                    className="group bg-veldheer-accent p-10 lg:p-12 border-t-4 border-veldheer-gold hover:bg-veldheer-gray transition-colors duration-300"
                   >
                     <div className="mb-6">
                       <svg className="w-12 h-12 md:w-16 md:h-16 text-veldheer-gold mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -122,7 +122,7 @@ const Charity = () => {
                       </svg>
                     </div>
                     <h4 className="text-2xl font-heading font-bold text-veldheer-gold mb-4 text-center">Nutrition Education</h4>
-                    <p className="text-gray-300 text-base md:text-lg leading-relaxed font-body text-center">
+                    <p className="text-gray-300 text-base md:text-lg leading-loose font-body text-center">
                       Teaching young athletes how to fuel their bodies for performance and long-term health
                     </p>
                   </motion.div>
@@ -131,7 +131,7 @@ const Charity = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.8 }}
-                    className="group bg-veldheer-accent p-8 lg:p-10 border-t-4 border-veldheer-gold hover:bg-veldheer-gray transition-colors duration-300"
+                    className="group bg-veldheer-accent p-10 lg:p-12 border-t-4 border-veldheer-gold hover:bg-veldheer-gray transition-colors duration-300"
                   >
                     <div className="mb-6">
                       <svg className="w-12 h-12 md:w-16 md:h-16 text-veldheer-gold mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -151,12 +151,12 @@ const Charity = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 1 }}
-                className="bg-gradient-to-r from-veldheer-gold to-veldheer-bronze p-10 md:p-12 lg:p-16 text-center"
+                className="bg-gradient-to-r from-veldheer-gold to-veldheer-bronze p-14 md:p-18 lg:p-24 text-center"
               >
-                <h3 className="text-3xl md:text-4xl font-display font-bold text-veldheer-dark mb-6">
+                <h3 className="text-3xl md:text-4xl font-display font-bold text-veldheer-dark mb-8">
                   Partner With Purpose
                 </h3>
-                <p className="text-lg md:text-xl text-veldheer-dark/90 leading-relaxed font-body font-normal mb-8 max-w-3xl mx-auto">
+                <p className="text-lg md:text-xl text-veldheer-dark/90 leading-loose font-body font-normal mb-10 max-w-3xl mx-auto">
                   When you partner with Veldheer Life, you're not just reaching an audience—you're supporting a mission to help the next generation stay in the game and reach their potential.
                 </p>
                 <p className="text-base md:text-lg text-veldheer-dark font-body font-semibold italic">

@@ -85,16 +85,16 @@ const Contact = () => {
           </motion.div>
 
           {/* Main Contact Info */}
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div className="grid md:grid-cols-2 gap-16 mb-24">
             {/* Left Column - Primary Contact */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="space-y-8"
+              className="space-y-12"
             >
               {/* Email */}
-              <div className="bg-veldheer-accent p-8 border-l-4 border-veldheer-gold">
+              <div className="bg-veldheer-accent p-10 md:p-12 border-l-4 border-veldheer-gold">
                 <h3 className="text-2xl font-display font-bold text-veldheer-gold mb-4">
                   Email
                 </h3>
@@ -107,7 +107,7 @@ const Contact = () => {
               </div>
 
               {/* Websites */}
-              <div className="bg-veldheer-accent p-8 border-l-4 border-veldheer-gold">
+              <div className="bg-veldheer-accent p-10 md:p-12 border-l-4 border-veldheer-gold">
                 <h3 className="text-2xl font-display font-bold text-veldheer-gold mb-4">
                   Websites
                 </h3>
@@ -132,7 +132,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-veldheer-accent p-8 border-l-4 border-veldheer-gold"
+              className="bg-veldheer-accent p-10 md:p-12 border-l-4 border-veldheer-gold"
             >
               <h3 className="text-2xl font-display font-bold text-veldheer-gold mb-6">
                 Social Media
@@ -165,10 +165,10 @@ const Contact = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 1 }}
-            className="text-center bg-gradient-to-r from-veldheer-gold to-veldheer-bronze p-12 md:p-16"
+            className="text-center bg-gradient-to-r from-veldheer-gold to-veldheer-bronze p-16 md:p-20 lg:p-24"
           >
-            <div className="mb-8">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-tight text-veldheer-dark mb-2">
+            <div className="mb-12">
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-tight text-veldheer-dark mb-4">
                 VELDHEER LIFE
               </h3>
               <p className="text-xl md:text-2xl font-heading font-medium text-veldheer-dark">
@@ -176,7 +176,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <p className="text-lg md:text-xl lg:text-2xl font-display font-semibold text-veldheer-dark max-w-3xl mx-auto leading-relaxed italic">
+            <p className="text-lg md:text-xl lg:text-2xl font-display font-semibold text-veldheer-dark max-w-3xl mx-auto leading-loose italic">
               "If your brand is serious about serving athletes, families, and long term performance, Veldheer Life is ready to build something real with you."
             </p>
           </motion.div>
@@ -186,7 +186,7 @@ const Contact = () => {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="mt-16 text-center text-gray-500 font-body"
+            className="mt-24 text-center text-gray-500 font-body"
           >
             <p>© {new Date().getFullYear()} Veldheer Life. All rights reserved.</p>
           </motion.div>
