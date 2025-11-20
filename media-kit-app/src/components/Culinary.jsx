@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 const Culinary = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [isExpanded, setIsExpanded] = useState(false)
 
   const cookingFocus = [
     'High performance meals for athletes that deliver serious protein, smart carbs, and healthy fats without feeling like diet food',
@@ -110,7 +111,37 @@ const Culinary = () => {
             </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 mb-20 lg:mb-28">
+          {/* Expand/Collapse Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-12 text-center"
+          >
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="group inline-flex items-center gap-3 bg-veldheer-gold hover:bg-veldheer-bronze text-veldheer-dark px-8 py-4 font-heading font-bold text-base md:text-lg tracking-wide uppercase transition-all duration-300 border-2 border-veldheer-gold hover:border-veldheer-bronze"
+            >
+              <span>{isExpanded ? 'Show Less' : 'See Full Culinary Details'}</span>
+              <svg
+                className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                strokeWidth={2.5}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </motion.div>
+
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="grid md:grid-cols-2 gap-12 lg:gap-16 mb-20 lg:mb-28">
             {/* Left Column - What Jared Cooks */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -304,6 +335,8 @@ const Culinary = () => {
               ))}
             </div>
           </motion.div>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>
