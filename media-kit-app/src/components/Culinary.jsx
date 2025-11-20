@@ -8,14 +8,16 @@ const Culinary = () => {
 
   const cookingFocus = [
     'High performance meals for athletes that deliver serious protein, smart carbs, and healthy fats without feeling like diet food',
+    'Game day recipes and crowd-pleasing spreads that bring big flavor for watching football with family and friends',
     'Budget friendly cooking for young athletes who need fuel but do not have restaurant money',
     'Quick family weeknight meals that can feed kids, parents, and hungry teammates without sacrificing quality',
   ]
 
   const partnerOpportunities = [
     'Meat and grocery brands',
-    'Better for you CPG and pantry staples',
-    'Family and kids food brands that want to stand for more than empty calories',
+    'CPG and pantry staples brands',
+    'Game day and entertaining food brands',
+    'Family and kids food brands',
     'Cookware, grill, and kitchen equipment partners who want their products used in a real home kitchen that still performs like a studio',
   ]
 
@@ -47,7 +49,7 @@ const Culinary = () => {
             </h2>
             <div className="w-24 h-1 bg-veldheer-gold mx-auto mb-6"></div>
             <p className="text-2xl md:text-3xl text-gray-400 font-heading font-medium">
-              Feeding Athletes and Families with High Performance Food
+              From Performance Meals to Game Day Eats
             </p>
           </motion.div>
 
@@ -58,7 +60,7 @@ const Culinary = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-base md:text-lg lg:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed font-body font-normal"
           >
-            Under the Veldheer Life umbrella, food is not a side project. It is one of the main tools Jared uses to change lives. The same discipline that carried him through twelve NFL seasons now shows up on the cutting board and the stove.
+            Under the Veldheer Life umbrella, food is not a side project. From high-protein performance meals to crowd-pleasing game day spreads, Jared brings the same discipline from twelve NFL seasons to every dish—whether it's fueling athletes or feeding a hungry Sunday football crowd.
           </motion.p>
 
           {/* Cooking Images Carousel */}
@@ -156,13 +158,19 @@ const Culinary = () => {
                     <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
+                    <span>Game day party spreads and crowd favorites</span>
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
+                    <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
                     <span>Smart uses of meat and eggs</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
                     <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span>Big flavor sauces</span>
+                    <span>Big flavor sauces and marinades</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-300 font-body text-base md:text-lg">
                     <svg className="w-5 h-5 text-veldheer-gold flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
