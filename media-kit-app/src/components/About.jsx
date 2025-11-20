@@ -90,56 +90,52 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="mt-24 lg:mt-32"
+              className="mt-16 lg:mt-20"
             >
               <div className="bg-veldheer-dark border-4 border-veldheer-gold p-8 md:p-12 lg:p-16">
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-center text-white mb-16">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-center text-white mb-10">
                   NFL Career <span className="text-veldheer-gold">Achievements</span>
                 </h3>
 
                 {/* Horizontal Scrolling Carousel */}
-                <div className="overflow-x-auto scrollbar-hide pb-6">
-                  <div className="flex gap-8 lg:gap-10 min-w-max px-2">
-                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-8 w-[300px] md:w-[340px] flex-shrink-0 min-h-[180px] flex flex-col justify-between">
-                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-4">2014 Cardinals</div>
-                      <div className="text-white font-display text-2xl md:text-3xl font-bold leading-tight">Team MVP</div>
+                <div className="overflow-x-auto scrollbar-hide pb-4">
+                  <div className="flex gap-6 lg:gap-8 min-w-max">
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">2014 Cardinals</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">Team MVP</div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-8 w-[300px] md:w-[340px] flex-shrink-0 min-h-[180px] flex flex-col justify-between">
-                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-4">2015 Cardinals</div>
-                      <div>
-                        <div className="text-white font-display text-2xl md:text-3xl font-bold leading-tight mb-3">Co-Captain</div>
-                        <div className="text-gray-400 font-body text-sm">NFC West Champions, NFC Championship</div>
-                      </div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">2015 Cardinals</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">Co-Captain</div>
+                      <div className="text-gray-400 font-body text-sm mt-1">NFC West Champions, NFC Championship</div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-8 w-[300px] md:w-[340px] flex-shrink-0 min-h-[180px] flex flex-col justify-between">
-                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-4">Career</div>
-                      <div className="text-white font-display text-2xl md:text-3xl font-bold leading-tight">119 Games Started</div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Career</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">119 Games Started</div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-8 w-[300px] md:w-[340px] flex-shrink-0 min-h-[180px] flex flex-col justify-between">
-                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-4">Elite Status</div>
-                      <div>
-                        <div className="text-white font-display text-2xl md:text-3xl font-bold leading-tight mb-3">Called Out of Retirement Twice</div>
-                        <div className="text-gray-400 font-body text-sm">Stayed in exceptional shape</div>
-                      </div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Elite Status</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">Called Out of Retirement Twice</div>
+                      <div className="text-gray-400 font-body text-sm mt-1">Stayed in exceptional shape</div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-8 w-[300px] md:w-[340px] flex-shrink-0 min-h-[180px] flex flex-col justify-between">
-                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-4">Teams</div>
-                      <div className="text-white font-display text-xl md:text-2xl font-bold leading-snug">Raiders, Cardinals, Broncos, Packers, Colts</div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Teams</div>
+                      <div className="text-white font-display text-lg md:text-xl font-bold leading-tight">Raiders, Cardinals, Broncos, Packers, Colts</div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-8 w-[300px] md:w-[340px] flex-shrink-0 min-h-[180px] flex flex-col justify-between">
-                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-4">Recognition</div>
-                      <div className="text-white font-display text-2xl md:text-3xl font-bold leading-tight">Game Ball from Every Team</div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Recognition</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">Game Ball from Every Team</div>
                     </div>
                   </div>
                 </div>
 
                 {/* Scroll Indicator */}
-                <div className="text-center mt-8">
+                <div className="text-center mt-6">
                   <p className="text-veldheer-gold/60 font-heading text-xs uppercase tracking-wider">
                     ← Scroll to see all achievements →
                   </p>
@@ -153,11 +149,10 @@ const About = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-32 lg:mt-40"
           >
-            <div className="text-center mb-20 lg:mb-24">
+            <div className="text-center mb-16 lg:mb-20">
               <span className="text-veldheer-gold/60 font-heading text-sm md:text-base tracking-widest uppercase">Target Audience</span>
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mt-6">
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mt-4">
                 Who <span className="text-veldheer-gold">Veldheer Life</span> Reaches
               </h3>
             </div>
@@ -166,9 +161,9 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="max-w-5xl mx-auto mb-24 lg:mb-32"
+              className="max-w-5xl mx-auto"
             >
-              <div className="bg-gradient-to-br from-veldheer-gold/10 to-veldheer-bronze/5 p-12 lg:p-16 border-4 border-veldheer-gold">
+              <div className="bg-gradient-to-br from-veldheer-gold/10 to-veldheer-bronze/5 p-10 lg:p-14 border-4 border-veldheer-gold">
                 <p className="text-xl md:text-2xl lg:text-3xl text-gray-100 leading-relaxed font-body font-normal text-center">
                   Veldheer Life reaches <span className="text-veldheer-gold font-semibold">young athletes and their parents</span> seeking real training and nutrition, <span className="text-veldheer-gold font-semibold">offensive linemen</span> who want to dominate physically and mentally, <span className="text-veldheer-gold font-semibold">NFL fans</span> who follow the game, <span className="text-veldheer-gold font-semibold">foodie athletes</span> who care about flavor and performance, and <span className="text-veldheer-gold font-semibold">families</span> looking for budget-friendly, high-protein meals that fuel long-term health.
                 </p>
@@ -180,6 +175,7 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 1.1 }}
+              className="mt-16 lg:mt-20"
             >
               <div className="relative overflow-hidden group">
                 <img
