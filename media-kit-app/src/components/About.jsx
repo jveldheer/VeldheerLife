@@ -1,10 +1,21 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const About = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+
+  // Scroll animation for quote overlay
+  const quoteRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: quoteRef,
+    offset: ["start end", "end start"]
+  })
+
+  const quoteOpacity = useTransform(scrollYProgress, [0, 0.3, 0.5, 0.7, 1], [0, 1, 1, 1, 0])
+  const quoteScale = useTransform(scrollYProgress, [0, 0.3, 0.5, 0.7, 1], [0.8, 1, 1, 1, 0.95])
+  const quoteY = useTransform(scrollYProgress, [0, 0.5, 1], [50, 0, -50])
 
   return (
     <section
@@ -34,7 +45,7 @@ const About = () => {
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-veldheer-gold to-transparent mx-auto"></div>
           </motion.div>
 
-          {/* Profile Image with Quote Overlay */}
+          {/* Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -48,35 +59,33 @@ const About = () => {
                 alt="Jared Veldheer"
                 className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full object-cover border-4 border-veldheer-gold shadow-2xl"
               />
+            </div>
+          </motion.div>
 
-              {/* Larry Fitzgerald Quote Overlay */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 1, delay: 1.2 }}
-                className="absolute inset-0 flex items-center justify-center"
-              >
-                <div className="relative w-full h-full flex items-center justify-center p-8 md:p-12 lg:p-16">
-                  <div className="absolute inset-0 bg-gradient-to-br from-veldheer-dark/95 via-veldheer-dark/90 to-veldheer-dark/95 rounded-full backdrop-blur-sm"></div>
-                  <div className="relative z-10 text-center max-w-md">
-                    <motion.div
-                      initial={{ scale: 0.9 }}
-                      animate={isInView ? { scale: 1 } : {}}
-                      transition={{ duration: 0.6, delay: 1.4 }}
-                    >
-                      <p className="text-lg md:text-xl lg:text-2xl text-white font-heading font-semibold leading-relaxed italic mb-4">
-                        "Jared Veldheer is one of the smartest players I've ever played with. His football IQ is off the charts."
-                      </p>
-                      <p className="text-veldheer-gold font-display font-bold text-xl md:text-2xl tracking-wide">
-                        — Larry Fitzgerald
-                      </p>
-                      <p className="text-gray-400 font-body text-sm mt-2">
-                        Hall of Fame WR, Arizona Cardinals
-                      </p>
-                    </motion.div>
-                  </div>
+          {/* Larry Fitzgerald Quote - Full Width Overlay with Scroll Animation */}
+          <motion.div
+            ref={quoteRef}
+            style={{
+              opacity: quoteOpacity,
+              scale: quoteScale,
+              y: quoteY
+            }}
+            className="relative -mt-10 mb-20 lg:mb-28"
+          >
+            <div className="bg-gradient-to-br from-veldheer-dark/95 via-veldheer-gray/95 to-veldheer-dark/95 backdrop-blur-md border-y-4 border-veldheer-gold py-16 md:py-20 lg:py-24 px-6 md:px-12 lg:px-20 shadow-2xl">
+              <div className="max-w-5xl mx-auto text-center">
+                <p className="text-2xl md:text-3xl lg:text-4xl text-white font-heading font-semibold leading-relaxed italic mb-8">
+                  "Jared was one of my all-time favorite teammates, smart, honest, and a true technician. The way he approached the game was thoughtful, disciplined, and all about mastering the details. Anyone learning from him is in great hands."
+                </p>
+                <div className="inline-block">
+                  <p className="text-veldheer-gold font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-wide mb-2">
+                    — Larry Fitzgerald
+                  </p>
+                  <p className="text-gray-400 font-body text-base md:text-lg">
+                    Hall of Fame WR, Arizona Cardinals
+                  </p>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
 
