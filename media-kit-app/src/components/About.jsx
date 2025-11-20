@@ -97,38 +97,48 @@ const About = () => {
                   NFL Career <span className="text-veldheer-gold">Achievements</span>
                 </h3>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
-                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">2014 Cardinals</div>
-                    <div className="text-white font-display text-xl md:text-2xl font-bold">Team MVP</div>
-                  </div>
+                {/* Horizontal Scrolling Carousel */}
+                <div className="overflow-x-auto scrollbar-hide pb-4">
+                  <div className="flex gap-6 lg:gap-8 min-w-max">
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">2014 Cardinals</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">Team MVP</div>
+                    </div>
 
-                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
-                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">2015 Cardinals</div>
-                    <div className="text-white font-display text-xl md:text-2xl font-bold">Co-Captain</div>
-                    <div className="text-gray-400 font-body text-sm mt-1">NFC West Champions, NFC Championship</div>
-                  </div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">2015 Cardinals</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">Co-Captain</div>
+                      <div className="text-gray-400 font-body text-sm mt-1">NFC West Champions, NFC Championship</div>
+                    </div>
 
-                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
-                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Career</div>
-                    <div className="text-white font-display text-xl md:text-2xl font-bold">119 Games Started</div>
-                  </div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Career</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">119 Games Started</div>
+                    </div>
 
-                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
-                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Elite Status</div>
-                    <div className="text-white font-display text-xl md:text-2xl font-bold">Called Out of Retirement Twice</div>
-                    <div className="text-gray-400 font-body text-sm mt-1">Stayed in exceptional shape</div>
-                  </div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Elite Status</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">Called Out of Retirement Twice</div>
+                      <div className="text-gray-400 font-body text-sm mt-1">Stayed in exceptional shape</div>
+                    </div>
 
-                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
-                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Teams</div>
-                    <div className="text-white font-display text-lg md:text-xl font-bold leading-tight">Raiders, Cardinals, Broncos, Packers, Colts</div>
-                  </div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Teams</div>
+                      <div className="text-white font-display text-lg md:text-xl font-bold leading-tight">Raiders, Cardinals, Broncos, Packers, Colts</div>
+                    </div>
 
-                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
-                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Recognition</div>
-                    <div className="text-white font-display text-xl md:text-2xl font-bold">Game Ball from Every Team</div>
+                    <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6 w-[280px] md:w-[320px] flex-shrink-0">
+                      <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Recognition</div>
+                      <div className="text-white font-display text-xl md:text-2xl font-bold">Game Ball from Every Team</div>
+                    </div>
                   </div>
+                </div>
+
+                {/* Scroll Indicator */}
+                <div className="text-center mt-6">
+                  <p className="text-veldheer-gold/60 font-heading text-xs uppercase tracking-wider">
+                    ← Scroll to see all achievements →
+                  </p>
                 </div>
               </div>
             </motion.div>

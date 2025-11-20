@@ -22,8 +22,8 @@ function App() {
       <About />
       <Metrics />
       <Media />
-      <LinemanVault />
       <Culinary />
+      <LinemanVault />
       <Charity />
       <Contact />
 
