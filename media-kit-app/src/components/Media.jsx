@@ -9,6 +9,12 @@ const Media = () => {
 
   const mediaFeatures = [
     {
+      title: 'The Today Show',
+      description: 'National feature on Jared\'s work as an elementary school lunch man, focused on how he brought real food and performance nutrition thinking into school meals for kids',
+      type: 'Television',
+      logo: '/images/today-logo.png'
+    },
+    {
       title: 'Next Level Chef Season 5',
       description: 'Cast member on Gordon Ramsay\'s hit cooking competition series on FOX, where Jared brings his lineman mentality into the kitchen and shows what performance based cooking looks like under real pressure',
       type: 'Television',
@@ -26,12 +32,6 @@ const Media = () => {
       description: 'Featured in the Amazon docu series that follows a full NFL season inside the building, on the field, and in the locker room',
       type: 'Streaming',
       logo: '/images/all-or-nothing-logo.png'
-    },
-    {
-      title: 'The Today Show',
-      description: 'National feature on Jared\'s work as an elementary school lunch man, focused on how he brought real food and performance nutrition thinking into school meals for kids',
-      type: 'Television',
-      logo: '/images/today-logo.png'
     },
     {
       title: 'The Washington Post',
@@ -75,72 +75,81 @@ const Media = () => {
             Jared's story has reached both hardcore football fans and everyday families. As a twelve year NFL offensive lineman who later stepped into an elementary school cafeteria to serve better food to kids, his work has been showcased on major sports and national news platforms.
           </motion.p>
 
-          {/* Media Features Grid */}
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-            {mediaFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                className={`relative bg-veldheer-accent transition-all duration-300 ${
-                  isExpanded
-                    ? feature.featured
-                      ? 'md:col-span-2 border-4 border-veldheer-gold p-8'
-                      : 'border-t-4 border-veldheer-gold p-8'
-                    : 'border-t-4 border-veldheer-gold p-6'
-                }`}
-              >
-                {feature.featured && isExpanded && (
-                  <div className="absolute top-0 right-0 bg-veldheer-gold text-veldheer-dark px-6 py-3 font-heading font-bold text-xs md:text-sm tracking-wider uppercase max-w-xs text-center">
-                    Premiers January 29th, 2026
-                  </div>
-                )}
-
-                <div className={`flex items-start justify-between ${isExpanded ? 'mb-4' : 'mb-0'}`}>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-3">
-                      {feature.logo && (
-                        <div className={`flex-shrink-0 bg-white p-2 rounded flex items-center justify-center ${
-                          isExpanded ? 'w-12 h-12 md:w-14 md:h-14' : 'w-10 h-10 md:w-12 md:h-12'
-                        }`}>
-                          <img
-                            src={feature.logo}
-                            alt={`${feature.title} logo`}
-                            className="max-w-full max-h-full object-contain"
-                          />
-                        </div>
-                      )}
-                      <h3 className={`font-display font-bold text-white ${
-                        isExpanded
-                          ? feature.featured
-                            ? 'text-3xl md:text-4xl'
-                            : 'text-2xl md:text-3xl'
-                          : 'text-xl md:text-2xl'
-                      }`}>
-                        {feature.title}
-                      </h3>
-                    </div>
-                    <span className="inline-block bg-veldheer-gold text-veldheer-dark px-3 py-1 text-xs font-heading font-bold tracking-wider uppercase">
-                      {feature.type}
-                    </span>
-                  </div>
-                </div>
-
-                {isExpanded && (
-                  <motion.p
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    transition={{ duration: 0.3 }}
-                    className={`text-gray-300 leading-relaxed font-body ${
-                      feature.featured ? 'text-lg md:text-xl' : 'text-base md:text-lg'
-                    }`}
+          {/* Media Features Carousel */}
+          <div className="relative">
+            <div className="overflow-x-auto scrollbar-hide pb-8">
+              <div className="flex gap-6 lg:gap-8 min-w-max px-4 md:px-0">
+                {mediaFeatures.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                    className={`relative bg-veldheer-accent transition-all duration-300 ${
+                      isExpanded
+                        ? 'w-[400px] md:w-[500px] lg:w-[600px] border-4 border-veldheer-gold p-8'
+                        : 'w-[300px] md:w-[350px] lg:w-[400px] border-t-4 border-veldheer-gold p-6'
+                    } flex-shrink-0`}
                   >
-                    {feature.description}
-                  </motion.p>
-                )}
-              </motion.div>
-            ))}
+                    {feature.featured && isExpanded && (
+                      <div className="absolute top-0 right-0 bg-veldheer-gold text-veldheer-dark px-6 py-3 font-heading font-bold text-xs md:text-sm tracking-wider uppercase">
+                        Premiers January 29th, 2026
+                      </div>
+                    )}
+
+                    <div className={`flex items-start justify-between ${isExpanded ? 'mb-4' : 'mb-0'}`}>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-4 mb-3">
+                          {feature.logo && (
+                            <div className={`flex-shrink-0 bg-white p-2 rounded flex items-center justify-center ${
+                              isExpanded ? 'w-12 h-12 md:w-14 md:h-14' : 'w-10 h-10 md:w-12 md:h-12'
+                            }`}>
+                              <img
+                                src={feature.logo}
+                                alt={`${feature.title} logo`}
+                                className="max-w-full max-h-full object-contain"
+                              />
+                            </div>
+                          )}
+                          <h3 className={`font-display font-bold text-white ${
+                            isExpanded
+                              ? feature.featured
+                                ? 'text-2xl md:text-3xl'
+                                : 'text-xl md:text-2xl'
+                              : 'text-lg md:text-xl'
+                          }`}>
+                            {feature.title}
+                          </h3>
+                        </div>
+                        <span className="inline-block bg-veldheer-gold text-veldheer-dark px-3 py-1 text-xs font-heading font-bold tracking-wider uppercase">
+                          {feature.type}
+                        </span>
+                      </div>
+                    </div>
+
+                    {isExpanded && (
+                      <motion.p
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        transition={{ duration: 0.3 }}
+                        className={`text-gray-300 leading-relaxed font-body ${
+                          feature.featured ? 'text-base md:text-lg' : 'text-sm md:text-base'
+                        }`}
+                      >
+                        {feature.description}
+                      </motion.p>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="text-center mt-4">
+              <p className="text-veldheer-gold/60 text-sm font-heading tracking-wider uppercase">
+                ← Scroll to explore →
+              </p>
+            </div>
           </div>
 
           {/* Expand/Collapse Button */}

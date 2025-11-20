@@ -84,6 +84,54 @@ const About = () => {
                 </p>
               </div>
             </motion.div>
+
+            {/* NFL Career Highlights */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="mt-16 lg:mt-20"
+            >
+              <div className="bg-veldheer-dark border-4 border-veldheer-gold p-8 md:p-12 lg:p-16">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-center text-white mb-10">
+                  NFL Career <span className="text-veldheer-gold">Achievements</span>
+                </h3>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
+                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">2014 Cardinals</div>
+                    <div className="text-white font-display text-xl md:text-2xl font-bold">Team MVP</div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
+                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">2015 Cardinals</div>
+                    <div className="text-white font-display text-xl md:text-2xl font-bold">Co-Captain</div>
+                    <div className="text-gray-400 font-body text-sm mt-1">NFC West Champions, NFC Championship</div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
+                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Career</div>
+                    <div className="text-white font-display text-xl md:text-2xl font-bold">119 Games Started</div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
+                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Elite Status</div>
+                    <div className="text-white font-display text-xl md:text-2xl font-bold">Called Out of Retirement Twice</div>
+                    <div className="text-gray-400 font-body text-sm mt-1">Stayed in exceptional shape</div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
+                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Teams</div>
+                    <div className="text-white font-display text-lg md:text-xl font-bold leading-tight">Raiders, Cardinals, Broncos, Packers, Colts</div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-veldheer-gold/10 to-transparent border-l-4 border-veldheer-gold p-6">
+                    <div className="text-veldheer-gold font-heading font-bold text-sm uppercase tracking-wider mb-2">Recognition</div>
+                    <div className="text-white font-display text-xl md:text-2xl font-bold">Game Ball from Every Team</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
 
           {/* Who Jared Reaches */}
@@ -99,66 +147,18 @@ const About = () => {
               </h3>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 lg:p-12 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
-              >
-                {/* Icon */}
-                <div className="mb-6">
-                  <svg className="w-12 h-12 text-veldheer-gold group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h4 className="text-2xl lg:text-3xl font-heading font-bold text-veldheer-gold mb-4 group-hover:text-white transition-colors duration-300">Athletes & Parents</h4>
-                <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-body group-hover:text-white transition-colors duration-300">
-                  Young athletes and their parents who want real training and real food
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="max-w-5xl mx-auto"
+            >
+              <div className="bg-gradient-to-br from-veldheer-gold/10 to-veldheer-bronze/5 p-10 lg:p-14 border-4 border-veldheer-gold">
+                <p className="text-xl md:text-2xl lg:text-3xl text-gray-100 leading-relaxed font-body font-normal text-center">
+                  Veldheer Life reaches <span className="text-veldheer-gold font-semibold">young athletes and their parents</span> seeking real training and nutrition, <span className="text-veldheer-gold font-semibold">offensive linemen</span> who want to dominate physically and mentally, <span className="text-veldheer-gold font-semibold">NFL fans</span> who follow the game, <span className="text-veldheer-gold font-semibold">foodie athletes</span> who care about flavor and performance, and <span className="text-veldheer-gold font-semibold">families</span> looking for budget-friendly, high-protein meals that fuel long-term health.
                 </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.9 }}
-                className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 lg:p-12 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
-              >
-                {/* Icon */}
-                <div className="mb-6">
-                  <svg className="w-12 h-12 text-veldheer-gold group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <circle cx="12" cy="6" r="2" />
-                    <circle cx="6" cy="12" r="2" />
-                    <circle cx="18" cy="12" r="2" />
-                    <line x1="8" y1="12" x2="16" y2="12" />
-                    <line x1="10" y1="6" x2="6" y2="10" />
-                    <line x1="14" y1="6" x2="18" y2="10" />
-                  </svg>
-                </div>
-                <h4 className="text-2xl lg:text-3xl font-heading font-bold text-veldheer-gold mb-4 group-hover:text-white transition-colors duration-300">Offensive Linemen</h4>
-                <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-body group-hover:text-white transition-colors duration-300">
-                  Offensive linemen who want to dominate physically and mentally
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 1.0 }}
-                className="group relative bg-gradient-to-br from-veldheer-accent to-veldheer-gray p-10 lg:p-12 border-l-4 border-veldheer-gold hover:border-veldheer-bronze transition-all duration-300"
-              >
-                {/* Icon */}
-                <div className="mb-6">
-                  <svg className="w-12 h-12 text-veldheer-gold group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                </div>
-                <h4 className="text-2xl lg:text-3xl font-heading font-bold text-veldheer-gold mb-4 group-hover:text-white transition-colors duration-300">Families</h4>
-                <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-body group-hover:text-white transition-colors duration-300">
-                  Families who want budget-friendly, high-protein, high-flavor meals that respect long-term health
-                </p>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
 
             {/* Feature Image */}
             <motion.div
