@@ -34,7 +34,7 @@ const About = () => {
             <div className="w-32 h-px bg-gradient-to-r from-transparent via-veldheer-gold to-transparent mx-auto"></div>
           </motion.div>
 
-          {/* Profile Image */}
+          {/* Profile Image with Quote Overlay */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -48,22 +48,40 @@ const About = () => {
                 alt="Jared Veldheer"
                 className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full object-cover border-4 border-veldheer-gold shadow-2xl"
               />
+
+              {/* Larry Fitzgerald Quote Overlay */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, delay: 1.2 }}
+                className="absolute inset-0 flex items-center justify-center"
+              >
+                <div className="relative w-full h-full flex items-center justify-center p-8 md:p-12 lg:p-16">
+                  <div className="absolute inset-0 bg-gradient-to-br from-veldheer-dark/95 via-veldheer-dark/90 to-veldheer-dark/95 rounded-full backdrop-blur-sm"></div>
+                  <div className="relative z-10 text-center max-w-md">
+                    <motion.div
+                      initial={{ scale: 0.9 }}
+                      animate={isInView ? { scale: 1 } : {}}
+                      transition={{ duration: 0.6, delay: 1.4 }}
+                    >
+                      <p className="text-lg md:text-xl lg:text-2xl text-white font-heading font-semibold leading-relaxed italic mb-4">
+                        "Jared Veldheer is one of the smartest players I've ever played with. His football IQ is off the charts."
+                      </p>
+                      <p className="text-veldheer-gold font-display font-bold text-xl md:text-2xl tracking-wide">
+                        — Larry Fitzgerald
+                      </p>
+                      <p className="text-gray-400 font-body text-sm mt-2">
+                        Hall of Fame WR, Arizona Cardinals
+                      </p>
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
           {/* Content Grid */}
           <div className="max-w-6xl mx-auto space-y-16 lg:space-y-24 mb-24 lg:mb-32">
-            {/* Core Intro */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-center"
-            >
-              <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 leading-relaxed font-body font-normal max-w-5xl mx-auto">
-                Jared Veldheer is a <span className="text-veldheer-gold font-semibold">twelve-year NFL offensive lineman</span> who has turned everything he learned in the trenches into a life mission.
-              </p>
-            </motion.div>
 
             {/* Two Column Details */}
             <motion.div
