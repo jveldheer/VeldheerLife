@@ -6,6 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: {
+        '100': '25rem',   // 400px
+        '104': '26rem',   // 416px
+        '108': '27rem',   // 432px
+        '112': '28rem',   // 448px
+        '116': '29rem',   // 464px
+        '120': '30rem',   // 480px
+        '128': '32rem',   // 512px
+        '144': '36rem',   // 576px
+      },
       colors: {
         'veldheer-dark': '#0a0a0a',
         'veldheer-gray': '#1a1a1a',
