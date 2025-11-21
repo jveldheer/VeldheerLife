@@ -45,7 +45,7 @@ const Media = () => {
     <section
       id="media"
       ref={ref}
-      className="relative pt-64 pb-56 md:pt-80 md:pb-64 lg:pt-96 lg:pb-80 xl:pt-112 xl:pb-96 bg-veldheer-gray"
+      className="relative pt-72 pb-64 md:pt-80 md:pb-72 lg:pt-96 lg:pb-80 xl:pt-96 xl:pb-96 bg-veldheer-gray"
     >
       <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20">
         <div className="max-w-7xl mx-auto">
