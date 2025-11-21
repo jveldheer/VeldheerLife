@@ -19,12 +19,24 @@ function App() {
     <div className="App">
       <Navigation />
       <Hero opacity={opacity} />
-      <About />
-      <Metrics />
-      <Media />
-      <Culinary />
-      <LinemanVault />
-      <Charity />
+      <div className="mb-32 md:mb-40 lg:mb-48">
+        <About />
+      </div>
+      <div className="mb-32 md:mb-40 lg:mb-48">
+        <Metrics />
+      </div>
+      <div className="mb-32 md:mb-40 lg:mb-48">
+        <Media />
+      </div>
+      <div className="mb-32 md:mb-40 lg:mb-48">
+        <Culinary />
+      </div>
+      <div className="mb-32 md:mb-40 lg:mb-48">
+        <LinemanVault />
+      </div>
+      <div className="mb-32 md:mb-40 lg:mb-48">
+        <Charity />
+      </div>
       <Contact />
 
       {/* Floating Collaboration Button */}
