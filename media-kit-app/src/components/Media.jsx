@@ -47,7 +47,7 @@ const Media = () => {
       ref={ref}
       className="relative pt-72 pb-64 md:pt-80 md:pb-72 lg:pt-96 lg:pb-80 xl:pt-96 xl:pb-96 bg-veldheer-gray"
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20">
+      <div className="container mx-auto px-6 lg:px-8 max-w-6xl">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <motion.div

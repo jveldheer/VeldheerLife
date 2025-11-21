@@ -63,7 +63,7 @@ const Brands = () => {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-16 xl:px-20 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 max-w-6xl relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
           <motion.div
