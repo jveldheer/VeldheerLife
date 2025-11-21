@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd media-kit-app && npm run build",
+  "outputDirectory": "media-kit-app/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
